@@ -1,4 +1,45 @@
 var spells = [
+  
+  
+  {
+    "name": "Black Hole",
+    "desc": "<p>You condense gravity into an immeasurably dense orb at a
+    point you can see within the spell's range. The orb fills a 10-
+    foot radius sphere around it with darkness, which no light,
+    magical or mundane, can illuminate.</p><p>When a creature enters within 30 feet of the orb for the first time on a turn or starts its turn there, it must make a Strength saving throw or be pulled 10 feet toward the orb. When a creature enters within 5 feet of the orb for the first time on a turn or starts its turn there, it must make a Constitution saving throw, taking 10d10 bludgeoning damage on a failed
+    save or half as much on a successful one.</p>",
+    "range": "150 feet",
+    "ritual": false,
+    "duration": "Instantaneous",
+    "concentration": false,
+    "casting_time": "1 action",
+    "level": 8,
+    "school": "Necromancy",
+    "class": [
+      "Sorcerer",
+      "Wizard"
+    ],
+    "level_desc": "8th-level",
+    "class_desc": "Sorcerer, Wizard",
+    "range_desc": "150 feet",
+    "component_desc": "V, S, M",
+    "verbal": true,
+    "material": true,
+    "somatic": true,
+    "material_desc": "a bit of sponge",
+    "material_cost": false,
+    "source": "EE PC",
+    "page": 15
+  },
+  
+  
+  
+  
+  
+  
+  
+  
+  
   {
     "name": "Abi-Dalzim's Horrid Wilting",
     "desc": "<p>You draw the moisture from every creature in a 30-foot cube centered on a point you choose within range. Each creature in that area must make a Constitution saving throw. Constructs and undead aren't affected, and plants and water elementals make this saving throw with disadvantage. A creature takes 12d8 necrotic damage on a failed save, or half as much damage on a successful one.</p><p>Nonmagical plants in the area that aren't creatures, such as trees and shrubs, wither and die instantly.</p>",
