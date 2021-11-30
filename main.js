@@ -497,6 +497,7 @@ $(document).ready(function() {
     refilter();
   }
 
+   $('#filterasis').bind('click',function() { toggleFilter(this, filterSources, 'ASIS') });
   $('#filterphb').bind('click',function() { toggleFilter(this, filterSources, 'PHB') });
   $('#filtereepc').bind('click',function() { toggleFilter(this, filterSources, 'EE PC') });
   $('#filterscag').bind('click',function() { toggleFilter(this, filterSources, 'SCAG') });
