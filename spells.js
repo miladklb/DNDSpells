@@ -3,11 +3,7 @@ var spells = [
   
   {
     "name": "Black Hole",
-    "desc": "<p>You condense gravity into an immeasurably dense orb at a
-    point you can see within the spell's range. The orb fills a 10-
-    foot radius sphere around it with darkness, which no light,
-    magical or mundane, can illuminate.</p><p>When a creature enters within 30 feet of the orb for the first time on a turn or starts its turn there, it must make a Strength saving throw or be pulled 10 feet toward the orb. When a creature enters within 5 feet of the orb for the first time on a turn or starts its turn there, it must make a Constitution saving throw, taking 10d10 bludgeoning damage on a failed
-    save or half as much on a successful one.</p>",
+    "desc": "<p>You condense gravity into an immeasurably dense orb at a point you can see within the spell's range. The orb fills a 10-foot radius sphere around it with darkness, which no light, magical or mundane, can illuminate.</p><p>When a creature enters within 30 feet of the orb for the first time on a turn or starts its turn there, it must make a Strength saving throw or be pulled 10 feet toward the orb. When a creature enters within 5 feet of the orb for the first time on a turn or starts its turn there, it must make a Constitution saving throw, taking 10d10 bludgeoning damage on a failed save or half as much on a successful one.</p>",
     "range": "150 feet",
     "ritual": false,
     "duration": "Instantaneous",
