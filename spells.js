@@ -24,7 +24,7 @@ var spells = [
     "somatic": true,
     "material_desc": "a bit of sponge",
     "material_cost": false,
-    "source": "EE PC",
+    "source": "ASIS",
     "page": 15
   },
   
