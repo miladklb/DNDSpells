@@ -34,7 +34,7 @@ var spells = [
     "duration": "1 round",
     "concentration": false,
     "casting_time": "1 action",
-    "level": 1,
+    "level": 3,
     "school": "Abjuration",
     "class": [
       "Druid",
