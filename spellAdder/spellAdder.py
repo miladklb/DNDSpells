@@ -2,35 +2,47 @@ from tkinter import *
 from tkinter import ttk
 import tkinter as tk
 import json
+import os
+
 # Create a spell from GUI fields
 def createSpell():
-    with open(fileName.get(), "a+") as spellBookFile:
+    # Create folder and file if it doesn't exist
+    if not os.path.exists("spellBooks"):
+        print("Creating spellbook directory")
+        os.mkdir("spellBooks")
+    if not os.path.exists(f"spellBooks/{fileName.get()}.json"):
+        print("Creating empty spellbook file")
+        open(f"spellBooks/{fileName.get()}.json", "w+")
+
+    # Read json list from file and append data
+    with open(f"spellBooks/{fileName.get()}.json", "r") as spellBookFile:
         try:
-            spellBookFile.seek(0)
             spellBook = json.load(spellBookFile)
-            print(spellBook)
         except Exception as e:
-            print("Creating new spellbook file.")
+            print("Creating empty spellbook list.")
             spellBook = []
         newSpell = {
             "name": name.get(),
             "desc": desc.get("1.0", "end"),
             "range": range.get(),
-            "ritual": ritualVar.get(),
+            "ritual": intToBool(ritualVar.get()),
             "duration": duration.get(),
-            "concentration": concentrationVar.get(),
+            "concentration": intToBool(concentrationVar.get()),
             "casting_time": cast.get(),
             "level": levelVar.get(),
             "school": school.get(),
             "class": charClass.get(),
-            "verbal": verbalVar.get(),
-            "material": materialVar.get(),
-            "somatic": somaticVar.get()
+            "verbal": intToBool(verbalVar.get()),
+            "material": intToBool(materialVar.get()),
+            "somatic": intToBool(somaticVar.get())
         }
         spellBook.append(newSpell)
-    with open(fileName.get(), "w+") as spellBookFile:
+    # Write appended json list to file
+    with open(f"spellBooks/{fileName.get()}.json", "w+") as spellBookFile:
         json.dump(spellBook, spellBookFile)
 
+def intToBool(num):
+    return False if num == 0 else True
 
 # GUI code
 root = Tk(className='Add a spell!')
