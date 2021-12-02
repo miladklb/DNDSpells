@@ -1,11 +1,18 @@
 from tkinter import *
 from tkinter import ttk
+from tkinter import messagebox
 import tkinter as tk
 import json
 import os
 
 # Create a spell from GUI fields
 def createSpell():
+    # Make sure important fields are filled
+    try:
+        levelVar.get()
+    except TclError:
+        messagebox.showerror(title="PLEASE", message="FILL OUT THE LEVEL")
+
     # Create folder and file if it doesn't exist
     if not os.path.exists("spellBooks"):
         print("Creating spellbook directory")
@@ -31,15 +38,56 @@ def createSpell():
             "casting_time": cast.get(),
             "level": levelVar.get(),
             "school": school.get(),
-            "class": charClass.get(),
+            "class": (charClass.get()).split(),
+            "level_desc": levelToLevelDesc(levelVar.get()),
+            "class_desc": ", ".join(charClass.get().split()),
+            "range_desc": range.get(),
+            "component_desc": generateComponentDesc(intToBool(verbalVar.get()),
+                                                    intToBool(materialVar.get()),
+                                                    intToBool(somaticVar.get())),
             "verbal": intToBool(verbalVar.get()),
             "material": intToBool(materialVar.get()),
-            "somatic": intToBool(somaticVar.get())
+            "somatic": intToBool(somaticVar.get()),
+            "source": source.get(),
+            "page": "69"  # Page doesn't seem to matter, so this is a placeholder until I realize it does
         }
+        # Only add material fields if materials is true
+        if(newSpell[material]):
+            newSpell["material_desc"] = material.get()
+            newSpell["material_cost"] = intToBool(materialCostVar)
+
         spellBook.append(newSpell)
     # Write appended json list to file
     with open(f"spellBooks/{fileName.get()}.json", "w+") as spellBookFile:
         json.dump(spellBook, spellBookFile)
+
+def clearFields():
+    pass
+
+def levelToLevelDesc(level):
+    match level:
+        case 0:
+            return "Cantrip"
+        case 1:
+            return "1st-level"
+        case 2:
+            return "2nd-level"
+        case 3:
+            return "3rd-level"
+        case _ if level > 3:
+            return f"{level}th-level"
+        case _ :
+            raise ValueError
+
+def generateComponentDesc(verbal, somatic, material):
+    desc = []
+    if verbal:
+        desc.append("V")
+    if somatic:
+        desc.append("S")
+    if material:
+        desc.append("M")
+    return ", ".join(desc)
 
 def intToBool(num):
     return False if num == 0 else True
@@ -58,7 +106,7 @@ fileName.grid(column=0, row=0, sticky="n")
 fileNameFrame.grid(column=0, row=0, sticky="n")
 addButton = ttk.Button(applyGrid, text="Add spell", command= createSpell)
 addButton.grid(column=0, row=1,sticky="n")
-clearButton = ttk.Button(applyGrid, text="Clear fields")
+clearButton = ttk.Button(applyGrid, text="Clear fields", command=clearFields())
 clearButton.grid(column=0, row=2, sticky="n")
 
 '''
@@ -110,10 +158,16 @@ somatic.grid(column=1, row=0, sticky="w")
 material.grid(column=2, row=0, sticky="w")
 
 # Materials
+materialFrame = ttk.Frame(frm)
 materialLabel = ttk.Label(frm, text="Materials:")
-material = ttk.Entry(frm)
 materialLabel.grid(column=0, row=5, sticky="w")
-material.grid(column=1, row=5, sticky="w")
+materialFrame.grid(column=1, row=5, sticky="w")
+
+material = ttk.Entry(materialFrame)
+materialCostVar = tk.IntVar()
+materialCost = ttk.Checkbutton(materialFrame, text="Consume?", variable=materialCostVar)
+material.grid(column=0, row=0, sticky="w")
+materialCost.grid(column=1, row=0, sticky="w")
 
 # Ritual
 ritualLabel = ttk.Label(frm, text="Ritual:")
@@ -159,6 +213,12 @@ classLabel = ttk.Label(frm, text="Class:")
 charClass = ttk.Entry(frm)
 classLabel.grid(column=0, row=12, sticky="w")
 charClass.grid(column=1, row=12, sticky="w")
+
+# Source
+sourceLabel = ttk.Label(frm, text="Source:")
+source = ttk.Entry(frm)
+sourceLabel.grid(column=0, row=13, sticky="w")
+source.grid(column=1, row=13, sticky="w")
 
 root.mainloop()
 
