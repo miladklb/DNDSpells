@@ -12,17 +12,23 @@ def createSpell():
         levelVar.get()
     except TclError:
         messagebox.showerror(title="PLEASE", message="FILL OUT THE LEVEL")
+        return
+    spellBookFileName = fileName.get()
+    # Provide default file name if none is given
+    if spellBookFileName == "":
+        messagebox.showwarning(title="Empty Spellbook Name", message="Defaulting to spells.json")
+        spellBookFileName = "spells"
 
     # Create folder and file if it doesn't exist
     if not os.path.exists("spellBooks"):
         print("Creating spellbook directory")
         os.mkdir("spellBooks")
-    if not os.path.exists(f"spellBooks/{fileName.get()}.json"):
+    if not os.path.exists(f"spellBooks/{spellBookFileName}.json"):
         print("Creating empty spellbook file")
-        open(f"spellBooks/{fileName.get()}.json", "w+")
+        open(f"spellBooks/{spellBookFileName}.json", "w+")
 
     # Read json list from file and append data
-    with open(f"spellBooks/{fileName.get()}.json", "r") as spellBookFile:
+    with open(f"spellBooks/{spellBookFileName}.json", "r") as spellBookFile:
         try:
             spellBook = json.load(spellBookFile)
         except Exception as e:
@@ -30,7 +36,7 @@ def createSpell():
             spellBook = []
         newSpell = {
             "name": name.get(),
-            "desc": desc.get("1.0", "end"),
+            "desc": desc.get("1.0", "end").rstrip("\n"),
             "range": range.get(),
             "ritual": intToBool(ritualVar.get()),
             "duration": duration.get(),
@@ -43,23 +49,25 @@ def createSpell():
             "class_desc": ", ".join(charClass.get().split()),
             "range_desc": range.get(),
             "component_desc": generateComponentDesc(intToBool(verbalVar.get()),
-                                                    intToBool(materialVar.get()),
-                                                    intToBool(somaticVar.get())),
+                                                    intToBool(somaticVar.get()),
+                                                    intToBool(materialVar.get())),
             "verbal": intToBool(verbalVar.get()),
             "material": intToBool(materialVar.get()),
             "somatic": intToBool(somaticVar.get()),
             "source": source.get(),
-            "page": "69"  # Page doesn't seem to matter, so this is a placeholder until I realize it does
+            "page": 69 if page.get() == "" else int(page.get())
         }
         # Only add material fields if materials is true
-        if(newSpell[material]):
-            newSpell["material_desc"] = material.get()
+        if(newSpell["material"]):
+            newSpell["material_desc"] = materialDesc.get()
             newSpell["material_cost"] = intToBool(materialCostVar)
-
+        # Only add higher level field if it's not empty
+        if(higherLevel.get("1.0", "end") != "\n"):
+            newSpell["higher_level"] = higherLevel.get("1.0", "end").rstrip("\n")
         spellBook.append(newSpell)
     # Write appended json list to file
-    with open(f"spellBooks/{fileName.get()}.json", "w+") as spellBookFile:
-        json.dump(spellBook, spellBookFile)
+    with open(f"spellBooks/{spellBookFileName}.json", "w+") as spellBookFile:
+        json.dump(spellBook, spellBookFile, indent=2)
 
 def clearFields():
     pass
@@ -92,6 +100,16 @@ def generateComponentDesc(verbal, somatic, material):
 def intToBool(num):
     return False if num == 0 else True
 
+def toggleMaterialOptions():
+    if intToBool(materialVar.get()):
+        print("enabling")
+        materialDesc.config(state="normal")
+        materialCost.config(state="normal")
+    else:
+        print("disabling")
+        materialDesc.config(state="disabled")
+        materialCost.config(state="disabled")
+
 # GUI code
 root = Tk(className='Add a spell!')
 frm = ttk.Frame(root, padding=10)
@@ -104,9 +122,9 @@ fileNameFrame = ttk.LabelFrame(applyGrid, text="Spellbook Name")
 fileName = ttk.Entry(fileNameFrame)
 fileName.grid(column=0, row=0, sticky="n")
 fileNameFrame.grid(column=0, row=0, sticky="n")
-addButton = ttk.Button(applyGrid, text="Add spell", command= createSpell)
+addButton = ttk.Button(applyGrid, text="Add spell", command=createSpell)
 addButton.grid(column=0, row=1,sticky="n")
-clearButton = ttk.Button(applyGrid, text="Clear fields", command=clearFields())
+clearButton = ttk.Button(applyGrid, text="Clear fields", command=clearFields)
 clearButton.grid(column=0, row=2, sticky="n")
 
 '''
@@ -127,98 +145,108 @@ desc = Text(frm, height=10)
 descLabel.grid(column=0, row=1, sticky="nw")
 desc.grid(column=1, row=1, sticky="w")
 
+# Higher Level
+higherLabel = ttk.Label(frm, text="Higher Levels:")
+higherLevel = Text(frm, height=3)
+higherLabel.grid(column=0, row=2, sticky="nw")
+higherLevel.grid(column=1, row=2, sticky="w")
+
 # Page
 pageLabel = ttk.Label(frm, text="Page:")
 page= ttk.Entry(frm)
-pageLabel.grid(column=0, row=2, sticky="w")
-page.grid(column=1, row=2, sticky="w")
+pageLabel.grid(column=0, row=3, sticky="w")
+page.grid(column=1, row=3, sticky="w")
 
 # Range
 rangeLabel = ttk.Label(frm, text="Range:")
 range = ttk.Entry(frm)
-rangeLabel.grid(column=0, row=3, sticky="w")
-range.grid(column=1, row=3, sticky="w")
+rangeLabel.grid(column=0, row=4, sticky="w")
+range.grid(column=1, row=4, sticky="w")
+
+
+
+# Materials
+materialFrame = ttk.Frame(frm)
+materialLabel = ttk.Label(frm, text="Materials:")
+materialLabel.grid(column=0, row=6, sticky="w")
+materialFrame.grid(column=1, row=6, sticky="w")
+
+materialDesc = ttk.Entry(materialFrame, state="disabled")
+materialCostVar = tk.IntVar()
+materialCost = ttk.Checkbutton(materialFrame, text="Consume?", variable=materialCostVar, state="disabled")
+materialDesc.grid(column=0, row=0, sticky="w")
+materialCost.grid(column=1, row=0, sticky="w")
 
 # Components
 compLabel = ttk.Label(frm, text="Components:")
-compLabel.grid(column=0, row=4, sticky="w")
+compLabel.grid(column=0, row=5, sticky="w")
 
 componentFrm = ttk.Frame(frm)
 componentFrm.grid()
-componentFrm.grid(column=1, row=4, sticky="w")
+componentFrm.grid(column=1, row=5, sticky="w")
 
 verbalVar = tk.IntVar()
 somaticVar = tk.IntVar()
 materialVar = tk.IntVar()
 verbal = ttk.Checkbutton(componentFrm, text="Verbal", variable=verbalVar)
 somatic = ttk.Checkbutton(componentFrm, text="Somatic", variable=somaticVar)
-material = ttk.Checkbutton(componentFrm, text="Material", variable=materialVar)
+material = ttk.Checkbutton(componentFrm, text="Material", variable=materialVar, command=toggleMaterialOptions)
 verbal.grid(column=0, row=0, sticky="w")
 somatic.grid(column=1, row=0, sticky="w")
 material.grid(column=2, row=0, sticky="w")
-
-# Materials
-materialFrame = ttk.Frame(frm)
-materialLabel = ttk.Label(frm, text="Materials:")
-materialLabel.grid(column=0, row=5, sticky="w")
-materialFrame.grid(column=1, row=5, sticky="w")
-
-material = ttk.Entry(materialFrame)
-materialCostVar = tk.IntVar()
-materialCost = ttk.Checkbutton(materialFrame, text="Consume?", variable=materialCostVar)
-material.grid(column=0, row=0, sticky="w")
-materialCost.grid(column=1, row=0, sticky="w")
 
 # Ritual
 ritualLabel = ttk.Label(frm, text="Ritual:")
 ritualVar = tk.IntVar()
 ritual = ttk.Checkbutton(frm, variable=ritualVar)
-ritualLabel.grid(column=0, row=6, sticky="w")
-ritual.grid(column=1, row=6, sticky="w")
+ritualLabel.grid(column=0, row=7, sticky="w")
+ritual.grid(column=1, row=7, sticky="w")
 
 # Duration
 durationLabel = ttk.Label(frm, text="Duration:")
 duration= ttk.Entry(frm)
-durationLabel.grid(column=0, row=7, sticky="w")
-duration.grid(column=1, row=7, sticky="w")
+durationLabel.grid(column=0, row=8, sticky="w")
+duration.grid(column=1, row=8, sticky="w")
 
 # Concentration
 concentrationLabel = ttk.Label(frm, text="Concentration:")
 concentrationVar = tk.IntVar()
 concentration = ttk.Checkbutton(frm, variable=concentrationVar)
-concentrationLabel.grid(column=0, row=8, sticky="w")
-concentration.grid(column=1, row=8, sticky="w")
+concentrationLabel.grid(column=0, row=9, sticky="w")
+concentration.grid(column=1, row=9, sticky="w")
 
 # Casting Time
 castLabel = ttk.Label(frm, text="Cast time:")
 cast = ttk.Entry(frm)
-castLabel.grid(column=0, row=9, sticky="w")
-cast.grid(column=1, row=9, sticky="w")
+castLabel.grid(column=0, row=10, sticky="w")
+cast.grid(column=1, row=10, sticky="w")
 
 # Level
 levelVar = tk.IntVar()
 levelLabel = ttk.Label(frm, text="Level:")
 level = ttk.OptionMenu(frm, levelVar, "Choose Level", 0,1,2,3,4,5,6,7,8,9)
-levelLabel.grid(column=0, row=10, sticky="w")
-level.grid(column=1, row=10, sticky="w")
+levelLabel.grid(column=0, row=11, sticky="w")
+level.grid(column=1, row=11, sticky="w")
 
 # School
 schoolLabel = ttk.Label(frm, text="School:")
 school = ttk.Entry(frm)
-schoolLabel.grid(column=0, row=11, sticky="w")
-school.grid(column=1, row=11, sticky="w")
+schoolLabel.grid(column=0, row=12, sticky="w")
+school.grid(column=1, row=12, sticky="w")
 
 # Class
 classLabel = ttk.Label(frm, text="Class:")
 charClass = ttk.Entry(frm)
-classLabel.grid(column=0, row=12, sticky="w")
-charClass.grid(column=1, row=12, sticky="w")
+classLabel.grid(column=0, row=13, sticky="w")
+charClass.grid(column=1, row=13, sticky="w")
 
 # Source
 sourceLabel = ttk.Label(frm, text="Source:")
 source = ttk.Entry(frm)
-sourceLabel.grid(column=0, row=13, sticky="w")
-source.grid(column=1, row=13, sticky="w")
+sourceLabel.grid(column=0, row=14, sticky="w")
+source.grid(column=1, row=14, sticky="w")
+
+
 
 root.mainloop()
 
