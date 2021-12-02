@@ -21,18 +21,15 @@ def createSpell():
 
     # Create folder and file if it doesn't exist
     if not os.path.exists("spellBooks"):
-        print("Creating spellbook directory")
         os.mkdir("spellBooks")
     if not os.path.exists(f"spellBooks/{spellBookFileName}.json"):
-        print("Creating empty spellbook file")
         open(f"spellBooks/{spellBookFileName}.json", "w+")
 
     # Read json list from file and append data
     with open(f"spellBooks/{spellBookFileName}.json", "r") as spellBookFile:
         try:
             spellBook = json.load(spellBookFile)
-        except Exception as e:
-            print("Creating empty spellbook list.")
+        except Exception:
             spellBook = []
         newSpell = {
             "name": name.get(),
@@ -102,11 +99,9 @@ def intToBool(num):
 
 def toggleMaterialOptions():
     if intToBool(materialVar.get()):
-        print("enabling")
         materialDesc.config(state="normal")
         materialCost.config(state="normal")
     else:
-        print("disabling")
         materialDesc.config(state="disabled")
         materialCost.config(state="disabled")
 
