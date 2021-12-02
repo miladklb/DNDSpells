@@ -4,19 +4,32 @@ import tkinter as tk
 import json
 # Create a spell from GUI fields
 def createSpell():
-    with open(fileName.get(), "w+") as spellBookFile:
+    with open(fileName.get(), "a+") as spellBookFile:
         try:
+            spellBookFile.seek(0)
             spellBook = json.load(spellBookFile)
-        except:
+            print(spellBook)
+        except Exception as e:
             print("Creating new spellbook file.")
-            spellBook = {}
+            spellBook = []
         newSpell = {
-            "name": name.get()
+            "name": name.get(),
+            "desc": desc.get("1.0", "end"),
+            "range": range.get(),
+            "ritual": ritualVar.get(),
+            "duration": duration.get(),
+            "concentration": concentrationVar.get(),
+            "casting_time": cast.get(),
+            "level": levelVar.get(),
+            "school": school.get(),
+            "class": charClass.get(),
+            "verbal": verbalVar.get(),
+            "material": materialVar.get(),
+            "somatic": somaticVar.get()
         }
-        spellBook.update(newSpell)
+        spellBook.append(newSpell)
+    with open(fileName.get(), "w+") as spellBookFile:
         json.dump(spellBook, spellBookFile)
-        spellBookFile.close()
-
 
 
 # GUI code
