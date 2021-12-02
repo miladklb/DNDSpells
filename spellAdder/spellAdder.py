@@ -1,9 +1,40 @@
 from tkinter import *
 from tkinter import ttk
 import tkinter as tk
+import json
+# Create a spell from GUI fields
+def createSpell():
+    with open(fileName.get(), "w+") as spellBookFile:
+        try:
+            spellBook = json.load(spellBookFile)
+        except:
+            print("Creating new spellbook file.")
+            spellBook = {}
+        newSpell = {
+            "name": name.get()
+        }
+        spellBook.update(newSpell)
+        json.dump(spellBook, spellBookFile)
+        spellBookFile.close()
+
+
+
+# GUI code
 root = Tk(className='Add a spell!')
 frm = ttk.Frame(root, padding=10)
 frm.grid()
+
+applyGrid = ttk.Frame(root, padding=20)
+applyGrid.grid(column=1, row=0)
+
+fileNameFrame = ttk.LabelFrame(applyGrid, text="Spellbook Name")
+fileName = ttk.Entry(fileNameFrame)
+fileName.grid(column=0, row=0, sticky="n")
+fileNameFrame.grid(column=0, row=0, sticky="n")
+addButton = ttk.Button(applyGrid, text="Add spell", command= createSpell)
+addButton.grid(column=0, row=1,sticky="n")
+clearButton = ttk.Button(applyGrid, text="Clear fields")
+clearButton.grid(column=0, row=2, sticky="n")
 
 '''
 Label = ttk.Label(frm, text="")
@@ -105,3 +136,4 @@ classLabel.grid(column=0, row=12, sticky="w")
 charClass.grid(column=1, row=12, sticky="w")
 
 root.mainloop()
+
