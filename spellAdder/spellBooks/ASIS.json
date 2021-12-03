@@ -1,0 +1,53 @@
+[
+  {
+    "name": "Black Hole",
+    "desc": "You condense gravity into an immeasurably dense orb at a point you can see within the spell's range. The orb fills a 10-foot radius sphere around it with darkness, which no light, magical or mundane, can illuminate.\nWhen a creature enters within 30 feet of the orb for the first time on a turn or starts its turn there, it must make a Strength saving throw or be pulled 10 feet toward the orb. When a creature enters within 5 feet of the orb for the first time on a turn or starts its turn there, it must make a Constitution\nsaving throw, taking 10d10 bludgeoning damage on a failed\nsave or half as much on a successful one.\nThe orb's gravitation makes moving away from it incredibly difficult. While within 10 feet of the orb, a creature moving away from the orb must spend 4 feet of movement for every 1 foot it moves. While within 30 feet of the orb, a creature\nmoving away from the orb must spend 2 feet of movement for every 1 foot it moves.\nIn addition, unsecured objects that are completely within the area of effect are automatically pulled into orb. Small nonmagical objects that come within 5 feet of the orb are immediately destroyed.",
+    "range": "60",
+    "ritual": false,
+    "duration": "Concentration, up to 1 minute",
+    "concentration": true,
+    "casting_time": "1 action",
+    "level": 8,
+    "school": "Transmutation",
+    "class": [
+      "Druid",
+      "Sorcerer"
+    ],
+    "level_desc": "8th-level",
+    "class_desc": "Druid, Sorcerer",
+    "range_desc": "60",
+    "component_desc": "V, S",
+    "verbal": true,
+    "material": false,
+    "somatic": true,
+    "source": "ASIS",
+    "page": 69
+  },
+  {
+    "name": "Celestial Pyre",
+    "desc": "You can cast this spell only at night. You memorialize a dead creature you touch, turning it into a constellation, provided that it has been dead no longer than 1 day. The target's body dissolves into stardust and rises into the sky.\nThe spell effectively extends the time limit on raising the target from the dead, since days spent under the influence of this spell don't count against the time limit of spells such as raise dead. A spell that targets the dead but usually require a body can be cast targeting this constellation instead, provided the spell is cast at night and the caster can see the target's constellation. If the target of this spell is returned to life, this spell ends and the constellation fades.",
+    "range": "Touch",
+    "ritual": false,
+    "duration": "Until dispelled or triggered",
+    "concentration": false,
+    "casting_time": "1 hour",
+    "level": 4,
+    "school": "Necromancy",
+    "class": [
+      "Bard",
+      "Cleric",
+      "Paladin"
+    ],
+    "level_desc": "4th-level",
+    "class_desc": "Bard, Cleric, Paladin",
+    "range_desc": "Touch",
+    "component_desc": "V, S, M",
+    "verbal": true,
+    "material": true,
+    "somatic": true,
+    "source": "ASIS",
+    "page": 69,
+    "material_desc": "100 lbs of firewood",
+    "material_cost": true
+  }
+]
