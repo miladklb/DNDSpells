@@ -67,7 +67,34 @@ def createSpell():
         json.dump(spellBook, spellBookFile, indent=2)
 
 def clearFields():
-    pass
+    # Clear all the text fields
+    name.delete(0, "end")
+    desc.delete("1.0", "end")
+    range.delete(0, "end")
+    higherLevel.delete("1.0", "end")
+    duration.delete(0, "end")
+    page.delete(0, "end")
+    materialDesc.delete(0, "end")
+    charClass.delete(0, "end")
+    school.delete(0, "end")
+    source.delete(0, "end")
+    cast.delete(0, "end")
+    levelVar.set("Choose Again")
+
+    # Toggle all the checkbuttons
+    if intToBool(ritualVar.get()):
+        ritual.invoke()
+    if intToBool(concentrationVar.get()):
+        concentration.invoke()
+    if intToBool(materialVar.get()):
+        material.invoke()
+    if intToBool(somaticVar.get()):
+        somatic.invoke()
+    if intToBool(verbalVar.get()):
+        verbal.invoke()
+    if intToBool(materialCostVar.get()):
+        materialCostVar.set(0)
+
 
 def levelToLevelDesc(level):
     match level:
@@ -219,7 +246,7 @@ cast.grid(column=1, row=10, sticky="w")
 # Level
 levelVar = tk.IntVar()
 levelLabel = ttk.Label(frm, text="Level:")
-level = ttk.OptionMenu(frm, levelVar, "Choose Level", 0,1,2,3,4,5,6,7,8,9)
+level = ttk.OptionMenu(frm, levelVar, "Choose Level", 0,1,2,3,4,5,6,7,8,9, direction="below")
 levelLabel.grid(column=0, row=11, sticky="w")
 level.grid(column=1, row=11, sticky="w")
 
