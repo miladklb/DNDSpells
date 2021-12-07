@@ -5,6 +5,11 @@ import tkinter as tk
 import json
 import os
 
+hasCompiled = True
+
+def startup():
+    compileSpells()
+
 # Create a spell from GUI fields
 def createSpell():
     # Make sure important fields are filled
@@ -65,6 +70,18 @@ def createSpell():
     # Write appended json list to file
     with open(f"spellBooks/{spellBookFileName}.json", "w+") as spellBookFile:
         json.dump(spellBook, spellBookFile, indent=2)
+    uncompileSpells()
+
+
+def uncompileSpells():
+    global hasCompiled
+    ttk.Style().configure("compileStyle.TButton", background="red")
+    hasCompiled = False
+
+def compileSpells():
+    global hasCompiled
+    ttk.Style().configure("compileStyle.TButton", background="green")
+    hasCompiled = True
 
 def clearFields():
     # Clear all the text fields
@@ -132,6 +149,19 @@ def toggleMaterialOptions():
         materialDesc.config(state="disabled")
         materialCost.config(state="disabled")
 
+def closeWindow():
+    global hasCompiled
+    if not hasCompiled and messagebox.askokcancel("Exit", "You have not compiled the latest spell,"
+                                                  " do you want to quit without compiling?"):
+        # If they click ok and spells have not been compiled
+        root.destroy()
+    elif hasCompiled:
+        # If the spells have been compiled
+        root.destroy()
+    else:
+        # If they click cancel to the exit prompt
+        pass
+
 # GUI code
 root = Tk(className='Add a spell!')
 frm = ttk.Frame(root, padding=10)
@@ -148,6 +178,8 @@ addButton = ttk.Button(applyGrid, text="Add spell", command=createSpell)
 addButton.grid(column=0, row=1,sticky="n")
 clearButton = ttk.Button(applyGrid, text="Clear fields", command=clearFields)
 clearButton.grid(column=0, row=2, sticky="n")
+compileButton = ttk.Button(applyGrid, style="compileStyle.TButton", text="Compile spells", command=compileSpells)
+compileButton.grid(column=0, row=3, sticky="n")
 
 '''
 Label = ttk.Label(frm, text="")
@@ -268,7 +300,8 @@ source = ttk.Entry(frm)
 sourceLabel.grid(column=0, row=14, sticky="w")
 source.grid(column=1, row=14, sticky="w")
 
-
-
+# allow grabbing the window close event
+root.protocol("WM_DELETE_WINDOW", closeWindow)
+root.after_idle(startup)
 root.mainloop()
 
