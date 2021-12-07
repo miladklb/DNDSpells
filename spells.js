@@ -1,7 +1,7 @@
 var spells = [
   {
     "name": "Black Hole",
-    "desc": "You condense gravity into an immeasurably dense orb at a point you can see within the spell's range. The orb fills a 10-foot radius sphere around it with darkness, which no light, magical or mundane, can illuminate.When a creature enters within 30 feet of the orb for the first time on a turn or starts its turn there, it must make a Strength saving throw or be pulled 10 feet toward the orb. When a creature enters within 5 feet of the orb for the first time on a turn or starts its turn there, it must make a Constitution saving throw, taking 10d10 bludgeoning damage on a failed save or half as much on a successful one. The orb's gravitation makes moving away from it incredibly difficult. While within 10 feet of the orb, a creature moving away from the orb must spend 4 feet of movement for every 1 foot it moves. While within 30 feet of the orb, a creature moving away from the orb must spend 2 feet of movement for every 1 foot it moves.In addition, unsecured objects that are completely within the area of effect are automatically pulled into orb. Small nonmagical objects that come within 5 feet of the orb are immediately destroyed.",
+    "desc": "<p>You condense gravity into an immeasurably dense orb at a point you can see within the spell's range. The orb fills a 10-foot radius sphere around it with darkness, which no light, magical or mundane, can illuminate.When a creature enters within 30 feet of the orb for the first time on a turn or starts its turn there, it must make a Strength saving throw or be pulled 10 feet toward the orb. When a creature enters within 5 feet of the orb for the first time on a turn or starts its turn there, it must make a Constitution saving throw, taking 10d10 bludgeoning damage on a failed save or half as much on a successful one. The orb's gravitation makes moving away from it incredibly difficult. While within 10 feet of the orb, a creature moving away from the orb must spend 4 feet of movement for every 1 foot it moves. While within 30 feet of the orb, a creature moving away from the orb must spend 2 feet of movement for every 1 foot it moves.In addition, unsecured objects that are completely within the area of effect are automatically pulled into orb. Small nonmagical objects that come within 5 feet of the orb are immediately destroyed.</p>",
     "range": "60",
     "ritual": false,
     "duration": "Concentration, up to 1 minute",
@@ -25,7 +25,7 @@ var spells = [
   },
   {
     "name": "Celestial Pyre",
-    "desc": "<p>.You can cast this spell only at night. You memorialize a dead creature you touch, turning it into a constellation, provided that it has been dead no longer than 1 day. The target's body dissolves into stardust and rises into the sky. The spell effectively extends the time limit on raising the target from the dead, since days spent under the influence of this spell don't count against the time limit of spells such as raise dead. A spell that targets the dead but usually require a body can be cast targeting this constellation instead, provided the spell is cast at night and the caster can see the target's constellation. If the target of this spell is returned to life, this spell ends and the constellation fades.</p>",
+    "desc": "<p>You can cast this spell only at night. You memorialize a dead creature you touch, turning it into a constellation, provided that it has been dead no longer than 1 day. The target's body dissolves into stardust and rises into the sky. The spell effectively extends the time limit on raising the target from the dead, since days spent under the influence of this spell don't count against the time limit of spells such as raise dead. A spell that targets the dead but usually require a body can be cast targeting this constellation instead, provided the spell is cast at night and the caster can see the target's constellation. If the target of this spell is returned to life, this spell ends and the constellation fades.</p>",
     "range": "Touch",
     "ritual": false,
     "duration": "Until dispelled or triggered",
@@ -52,7 +52,7 @@ var spells = [
   },
   {
     "name": "Dazzling Gleam",
-    "desc": "You release a burst of light. Each creature within 30 feet of you must make a Constitution saving throw. On a failed save, a creature takes 3d8 radiant damage and is blinded until the end of its next turn. On a successful save, it takes half as much damage and is not blinded.",
+    "desc": "<p>You release a burst of light. Each creature within 30 feet of you must make a Constitution saving throw. On a failed save, a creature takes 3d8 radiant damage and is blinded until the end of its next turn. On a successful save, it takes half as much damage and is not blinded.</p>",
     "range": "Self (30-foot radius)",
     "ritual": false,
     "duration": "Instantaneous",
@@ -75,11 +75,11 @@ var spells = [
     "somatic": true,
     "source": "ASIS",
     "page": 69,
-    "higher_level": "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for each slot level above 2nd."
+    "higher_level": "<p>When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for each slot level above 2nd.</p>"
   },
   {
     "name": "Field of Stars",
-    "desc": "You conjure into existence four motes of starlight, each in an unoccupied space you can see within range. Each mote provides dim light in a 5-foot radius and lasts for the duration or until it explodes. When a creature moves within 5 feet of a mote or moves away from a mote within 5 feet of it, the mote explodes. Each creature within 5 feet of the mote must make a Dexterity saving throw. A creature takes 2d6 radiant damage on a failed save, or half as much damage on a successful one.",
+    "desc": "<p>You conjure into existence four motes of starlight, each in an unoccupied space you can see within range. Each mote provides dim light in a 5-foot radius and lasts for the duration or until it explodes. When a creature moves within 5 feet of a mote or moves away from a mote within 5 feet of it, the mote explodes. Each creature within 5 feet of the mote must make a Dexterity saving throw. A creature takes 2d6 radiant damage on a failed save, or half as much damage on a successful one.</p>",
     "range": "60 feet",
     "ritual": true,
     "duration": "1 minute",
@@ -101,7 +101,7 @@ var spells = [
     "somatic": true,
     "source": "ASIS",
     "page": 69,
-    "higher_level": "When you cast this spell using a spell slot of 5th level or higher, you create one additional mote for each slot level above 4th."
+    "higher_level": "<p>When you cast this spell using a spell slot of 5th level or higher, you create one additional mote for each slot level above 4th.</p>"
   },
   {
     "name": "Abi-Dalzim's Horrid Wilting",
