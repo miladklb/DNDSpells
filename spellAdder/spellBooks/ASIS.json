@@ -49,5 +49,58 @@
     "page": 69,
     "material_desc": "100 lbs of firewood",
     "material_cost": true
+  },
+  {
+    "name": "Dazzling Gleam",
+    "desc": "You release a burst of light. Each creature within 30 feet of you must make a Constitution saving throw. On a failed save, a creature takes 3d8 radiant damage and is blinded until the end of its next turn. On a successful save, it takes half as much damage and is not blinded.",
+    "range": "Self (30-foot radius)",
+    "ritual": false,
+    "duration": "Instantaneous",
+    "concentration": false,
+    "casting_time": "1 action",
+    "level": 2,
+    "school": "Evocation",
+    "class": [
+      "Bard",
+      "Paladin",
+      "Sorceror",
+      "Warlock"
+    ],
+    "level_desc": "2nd-level",
+    "class_desc": "Bard, Paladin, Sorceror, Warlock",
+    "range_desc": "Self (30-foot radius)",
+    "component_desc": "V, S",
+    "verbal": true,
+    "material": false,
+    "somatic": true,
+    "source": "ASIS",
+    "page": 69,
+    "higher_level": "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for each slot level above 2nd."
+  },
+  {
+    "name": "Field of Stars",
+    "desc": "You conjure into existence four motes of starlight, each in an unoccupied space you can see within range. Each mote provides dim light in a 5-foot radius and lasts for the duration or until it explodes.\nWhen a creature moves within 5 feet of a mote or moves away from a mote within 5 feet of it, the mote explodes. Each creature within 5 feet of the mote must make a Dexterity saving throw. A creature takes 2d6 radiant damage on a failed save, or half as much damage on a successful one.",
+    "range": "60 feet",
+    "ritual": true,
+    "duration": "1 minute",
+    "concentration": false,
+    "casting_time": "1 action",
+    "level": 4,
+    "school": "Conjuration",
+    "class": [
+      "Bard",
+      "Druid",
+      "Ranger"
+    ],
+    "level_desc": "4th-level",
+    "class_desc": "Bard, Druid, Ranger",
+    "range_desc": "60 feet",
+    "component_desc": "V, S",
+    "verbal": true,
+    "material": false,
+    "somatic": true,
+    "source": "ASIS",
+    "page": 69,
+    "higher_level": "When you cast this spell using a spell slot of 5th level or higher, you create one additional mote for each slot level above 4th."
   }
 ]
