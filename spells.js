@@ -1,31 +1,107 @@
 var spells = [
-  
-  
   {
     "name": "Black Hole",
-    "desc": "<p>You condense gravity into an immeasurably dense orb at a point you can see within the spell's range. The orb fills a 10-foot radius sphere around it with darkness, which no light, magical or mundane, can illuminate.</p><p>When a creature enters within 30 feet of the orb for the first time on a turn or starts its turn there, it must make a Strength saving throw or be pulled 10 feet toward the orb. When a creature enters within 5 feet of the orb for the first time on a turn or starts its turn there, it must make a Constitution saving throw, taking 10d10 bludgeoning damage on a failed save or half as much on a successful one.</p>",
-    "range": "150 feet",
+    "desc": "You condense gravity into an immeasurably dense orb at a point you can see within the spell's range. The orb fills a 10-foot radius sphere around it with darkness, which no light, magical or mundane, can illuminate.\nWhen a creature enters within 30 feet of the orb for the first time on a turn or starts its turn there, it must make a Strength saving throw or be pulled 10 feet toward the orb. When a creature enters within 5 feet of the orb for the first time on a turn or starts its turn there, it must make a Constitution\nsaving throw, taking 10d10 bludgeoning damage on a failed\nsave or half as much on a successful one.\nThe orb's gravitation makes moving away from it incredibly difficult. While within 10 feet of the orb, a creature moving away from the orb must spend 4 feet of movement for every 1 foot it moves. While within 30 feet of the orb, a creature\nmoving away from the orb must spend 2 feet of movement for every 1 foot it moves.\nIn addition, unsecured objects that are completely within the area of effect are automatically pulled into orb. Small nonmagical objects that come within 5 feet of the orb are immediately destroyed.",
+    "range": "60",
     "ritual": false,
-    "duration": "Instantaneous",
-    "concentration": false,
+    "duration": "Concentration, up to 1 minute",
+    "concentration": true,
     "casting_time": "1 action",
     "level": 8,
-    "school": "Necromancy",
+    "school": "Transmutation",
     "class": [
-      "Sorcerer",
-      "Wizard"
+      "Druid",
+      "Sorcerer"
     ],
     "level_desc": "8th-level",
-    "class_desc": "Sorcerer, Wizard",
-    "range_desc": "150 feet",
+    "class_desc": "Druid, Sorcerer",
+    "range_desc": "60",
+    "component_desc": "V, S",
+    "verbal": true,
+    "material": false,
+    "somatic": true,
+    "source": "ASIS",
+    "page": 69
+  },
+  {
+    "name": "Celestial Pyre",
+    "desc": "You can cast this spell only at night. You memorialize a dead creature you touch, turning it into a constellation, provided that it has been dead no longer than 1 day. The target's body dissolves into stardust and rises into the sky.\nThe spell effectively extends the time limit on raising the target from the dead, since days spent under the influence of this spell don't count against the time limit of spells such as raise dead. A spell that targets the dead but usually require a body can be cast targeting this constellation instead, provided the spell is cast at night and the caster can see the target's constellation. If the target of this spell is returned to life, this spell ends and the constellation fades.",
+    "range": "Touch",
+    "ritual": false,
+    "duration": "Until dispelled or triggered",
+    "concentration": false,
+    "casting_time": "1 hour",
+    "level": 4,
+    "school": "Necromancy",
+    "class": [
+      "Bard",
+      "Cleric",
+      "Paladin"
+    ],
+    "level_desc": "4th-level",
+    "class_desc": "Bard, Cleric, Paladin",
+    "range_desc": "Touch",
     "component_desc": "V, S, M",
     "verbal": true,
     "material": true,
     "somatic": true,
-    "material_desc": "a bit of sponge",
-    "material_cost": false,
     "source": "ASIS",
-    "page": 15
+    "page": 69,
+    "material_desc": "100 lbs of firewood",
+    "material_cost": true
+  },
+  {
+    "name": "Dazzling Gleam",
+    "desc": "You release a burst of light. Each creature within 30 feet of you must make a Constitution saving throw. On a failed save, a creature takes 3d8 radiant damage and is blinded until the end of its next turn. On a successful save, it takes half as much damage and is not blinded.",
+    "range": "Self (30-foot radius)",
+    "ritual": false,
+    "duration": "Instantaneous",
+    "concentration": false,
+    "casting_time": "1 action",
+    "level": 2,
+    "school": "Evocation",
+    "class": [
+      "Bard",
+      "Paladin",
+      "Sorceror",
+      "Warlock"
+    ],
+    "level_desc": "2nd-level",
+    "class_desc": "Bard, Paladin, Sorceror, Warlock",
+    "range_desc": "Self (30-foot radius)",
+    "component_desc": "V, S",
+    "verbal": true,
+    "material": false,
+    "somatic": true,
+    "source": "ASIS",
+    "page": 69,
+    "higher_level": "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for each slot level above 2nd."
+  },
+  {
+    "name": "Field of Stars",
+    "desc": "You conjure into existence four motes of starlight, each in an unoccupied space you can see within range. Each mote provides dim light in a 5-foot radius and lasts for the duration or until it explodes.\nWhen a creature moves within 5 feet of a mote or moves away from a mote within 5 feet of it, the mote explodes. Each creature within 5 feet of the mote must make a Dexterity saving throw. A creature takes 2d6 radiant damage on a failed save, or half as much damage on a successful one.",
+    "range": "60 feet",
+    "ritual": true,
+    "duration": "1 minute",
+    "concentration": false,
+    "casting_time": "1 action",
+    "level": 4,
+    "school": "Conjuration",
+    "class": [
+      "Bard",
+      "Druid",
+      "Ranger"
+    ],
+    "level_desc": "4th-level",
+    "class_desc": "Bard, Druid, Ranger",
+    "range_desc": "60 feet",
+    "component_desc": "V, S",
+    "verbal": true,
+    "material": false,
+    "somatic": true,
+    "source": "ASIS",
+    "page": 69,
+    "higher_level": "When you cast this spell using a spell slot of 5th level or higher, you create one additional mote for each slot level above 4th."
   },
   {
     "name": "Abi-Dalzim's Horrid Wilting",
@@ -533,7 +609,7 @@ var spells = [
   },
   {
     "name": "Arms of Hadar",
-    "desc": "<p>You invoke the power of Hadar, the Dark Hunger. Tendrils of dark energy erupt from you and batter all creatures within 10 feet of you. Each creature in that area must make a strength saving throw. On a failed save, a target takes 2d6 necrotic damage and can’t take reactions until its next turn. On a successful save, the creature takes half damage, but suffers no other effect.</p>",
+    "desc": "<p>You invoke the power of Hadar, the Dark Hunger. Tendrils of dark energy erupt from you and batter all creatures within 10 feet of you. Each creature in that area must make a strength saving throw. On a failed save, a target takes 2d6 necrotic damage and can\u00e2\u20ac\u2122t take reactions until its next turn. On a successful save, the creature takes half damage, but suffers no other effect.</p>",
     "higher_level": "<p>When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st.</p>",
     "range": "Self",
     "ritual": false,
@@ -613,7 +689,7 @@ var spells = [
   },
   {
     "name": "Aura of Life",
-    "desc": "<p>Life-preserving energy radiates from you in an aura with a 30-foot radius. Until the spell ends, the aura moves with you, centered on you. Each nonhostile creature in the aura (including you) has resistance to necrotic damage, and its hit point maximum can’t be reduced. In addition, a nonhostile, living creature regains 1 hit point when it starts its turn in the aura with 0 hit points.</p>",
+    "desc": "<p>Life-preserving energy radiates from you in an aura with a 30-foot radius. Until the spell ends, the aura moves with you, centered on you. Each nonhostile creature in the aura (including you) has resistance to necrotic damage, and its hit point maximum can\u00e2\u20ac\u2122t be reduced. In addition, a nonhostile, living creature regains 1 hit point when it starts its turn in the aura with 0 hit points.</p>",
     "range": "Self",
     "ritual": false,
     "duration": "Concentration, up to 10 minutes",
@@ -636,7 +712,7 @@ var spells = [
   },
   {
     "name": "Aura of Purity",
-    "desc": "<p>Purifying energy radiates from you in an aura with a 30-foot radius. Until the spell ends, the aura moves with you, centered on you. Each nonhostile creature in the aura (including you) can’t become diseased, has resistance to poison damage, and has advantage on saving throws against affects that cause any of the following conditions: blinded, charmed, deafened, frightened, paralysed, poisoned and stunned.</p>",
+    "desc": "<p>Purifying energy radiates from you in an aura with a 30-foot radius. Until the spell ends, the aura moves with you, centered on you. Each nonhostile creature in the aura (including you) can\u00e2\u20ac\u2122t become diseased, has resistance to poison damage, and has advantage on saving throws against affects that cause any of the following conditions: blinded, charmed, deafened, frightened, paralysed, poisoned and stunned.</p>",
     "range": "Self",
     "ritual": false,
     "duration": "Concentration, up to 10 minutes",
@@ -742,7 +818,7 @@ var spells = [
   },
   {
     "name": "Banishing Smite",
-    "desc": "<p>The next time you hit a creature with a weapon attack before this spell ends, your weapon crackles with force, and the attack deals an extra 5d10 force damage to the target. Additionally, if this attack reduces the target to 50 hit points or fewer, you banish it. If the target is native to a different plane of existence than the one you’re on, the target disappears, returning to its home plane. If the target is native to the plane you’re on, the creature vanishes into a harmless demiplane. While there, the target is incapacitated. It remains there until the spell ends, at which point the target reappears in the space it left or in the nearest unoccupied space if that space is occupied.</p>",
+    "desc": "<p>The next time you hit a creature with a weapon attack before this spell ends, your weapon crackles with force, and the attack deals an extra 5d10 force damage to the target. Additionally, if this attack reduces the target to 50 hit points or fewer, you banish it. If the target is native to a different plane of existence than the one you\u00e2\u20ac\u2122re on, the target disappears, returning to its home plane. If the target is native to the plane you\u00e2\u20ac\u2122re on, the creature vanishes into a harmless demiplane. While there, the target is incapacitated. It remains there until the spell ends, at which point the target reappears in the space it left or in the nearest unoccupied space if that space is occupied.</p>",
     "range": "Self",
     "ritual": false,
     "duration": "Concentration, up to 1 minute",
@@ -945,7 +1021,7 @@ var spells = [
   },
   {
     "name": "Bigby's Hand",
-    "desc": "<p>You create a Large hand of shimmering, translucent force in an unoccupied space that you can see within range. The hand lasts for the spell’s duration, and it moves at your command, mimicking the movements of your own hand.</p><p>The hand is an object that has AC 20 and hit points equal to your hit point maximum. If it drops to 0 hit points, the spell ends. It has a Strength of 26 (+8) and a Dexterity of 10 (+0). The hand doesn’t fill its space.</p><p>When you cast the spell and as a bonus action on your subsequent turns, you can move the hand up to 60 feet and then cause one of the following effects with it.</p><p><b>Clenched Fist.</b> The hand strikes one creature or object within 5 feet of it. Make a melee spell attack for the hand using your game statistics. On a hit, the target takes 4d8 force damage.</p><p><b>Forceful Hand.</b> The hand attempts to push a creature within 5 feet of it in a direction you choose. Make a check with the hand’s Strength contested by the Strength (Athletics) check of the target. If the target is Medium or smaller, you have advantage on the check. If you succeed, the hand pushes the target up to 5 feet plus a number of feet equal to five times your spellcasting ability modifier. The hand moves with the target to remain within 5 feet of it.</p><p><b>Grasping Hand.</b> The hand attempts to grapple a Huge or smaller creature within 5 feet of it. You use the hand’s Strength score to resolve the grapple. If the target is Medium or smaller, you have advantage on the check. While the hand is grappling the target, you can use a bonus action to have the hand crush it. When you do so, the target takes bludgeoning damage equal to 2d6 + your spellcasting ability modifier.</p><p><b>Interposing Hand.</b> The hand interposes itself between you and a creature you choose until you give the hand a different command. The hand moves to stay between you and the target, providing you with half cover against the target. The target can't move through the hand’s space if its Strength score is less than or equal to the hand’s Strength score. If its Strength score is higher than the hand’s Strength score, the target can move toward you through the hand’s space, but that space is difficult terrain for the target.</p>",
+    "desc": "<p>You create a Large hand of shimmering, translucent force in an unoccupied space that you can see within range. The hand lasts for the spell\u00e2\u20ac\u2122s duration, and it moves at your command, mimicking the movements of your own hand.</p><p>The hand is an object that has AC 20 and hit points equal to your hit point maximum. If it drops to 0 hit points, the spell ends. It has a Strength of 26 (+8) and a Dexterity of 10 (+0). The hand doesn\u00e2\u20ac\u2122t fill its space.</p><p>When you cast the spell and as a bonus action on your subsequent turns, you can move the hand up to 60 feet and then cause one of the following effects with it.</p><p><b>Clenched Fist.</b> The hand strikes one creature or object within 5 feet of it. Make a melee spell attack for the hand using your game statistics. On a hit, the target takes 4d8 force damage.</p><p><b>Forceful Hand.</b> The hand attempts to push a creature within 5 feet of it in a direction you choose. Make a check with the hand\u00e2\u20ac\u2122s Strength contested by the Strength (Athletics) check of the target. If the target is Medium or smaller, you have advantage on the check. If you succeed, the hand pushes the target up to 5 feet plus a number of feet equal to five times your spellcasting ability modifier. The hand moves with the target to remain within 5 feet of it.</p><p><b>Grasping Hand.</b> The hand attempts to grapple a Huge or smaller creature within 5 feet of it. You use the hand\u00e2\u20ac\u2122s Strength score to resolve the grapple. If the target is Medium or smaller, you have advantage on the check. While the hand is grappling the target, you can use a bonus action to have the hand crush it. When you do so, the target takes bludgeoning damage equal to 2d6 + your spellcasting ability modifier.</p><p><b>Interposing Hand.</b> The hand interposes itself between you and a creature you choose until you give the hand a different command. The hand moves to stay between you and the target, providing you with half cover against the target. The target can't move through the hand\u00e2\u20ac\u2122s space if its Strength score is less than or equal to the hand\u00e2\u20ac\u2122s Strength score. If its Strength score is higher than the hand\u00e2\u20ac\u2122s Strength score, the target can move toward you through the hand\u00e2\u20ac\u2122s space, but that space is difficult terrain for the target.</p>",
     "higher_level": "<p>When you cast this spell using a spell slot of 6th level or higher, the damage from the clenched fist option increases by 2d8 and the damage from the grasping hand increases by 2d6 for each slot level above 5th.</p>",
     "range": "120 feet",
     "ritual": false,
@@ -1080,7 +1156,7 @@ var spells = [
   },
   {
     "name": "Blinding Smite",
-    "desc": "<p>The next time you hit a creature with a melee weapon attack during this spell’s duration, your weapon flares with bright light, and the attack deals an extra 3d8 radiant damage to the target. Additionally, the target must succeed on a constitution saving throw or be blinded until the spell ends.</p><p>A creature blinded by this spell makes another constitution saving throw at the end of each of its turns. On a successful save, it is no longer blinded.</p>",
+    "desc": "<p>The next time you hit a creature with a melee weapon attack during this spell\u00e2\u20ac\u2122s duration, your weapon flares with bright light, and the attack deals an extra 3d8 radiant damage to the target. Additionally, the target must succeed on a constitution saving throw or be blinded until the spell ends.</p><p>A creature blinded by this spell makes another constitution saving throw at the end of each of its turns. On a successful save, it is no longer blinded.</p>",
     "range": "Self",
     "ritual": false,
     "duration": "Concentration, up to 1 minute",
@@ -1629,7 +1705,7 @@ var spells = [
   },
   {
     "name": "Cloud of Daggers",
-    "desc": "<p>You fill the air with spinning daggers in a cube 5 feet on each side, centered on a point you choose within range. A creature takes 4d4 slashing damage when it enters the spell’s area for the first time on a turn or starts its turn there.</p>",
+    "desc": "<p>You fill the air with spinning daggers in a cube 5 feet on each side, centered on a point you choose within range. A creature takes 4d4 slashing damage when it enters the spell\u00e2\u20ac\u2122s area for the first time on a turn or starts its turn there.</p>",
     "higher_level": "<p>When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 2d4 for each slot level above 2nd.</p>",
     "range": "60 feet",
     "ritual": false,
@@ -1821,7 +1897,7 @@ var spells = [
   },
   {
     "name": "Compelled Duel",
-    "desc": "<p>You attempt to compel a creature into a duel. One creature that you can see within range must make a wisdom saving throw. On a failed save, the creature is drawn to you, compelled by your divine demand. For the duration, it has disadvantage on attack rolls against creatures other than you, and must make a wisdom saving throw each time it attempts to move into a space that is more than 30 feet away from you; if it succeeds on this saving throw, the spell doesn’t restrict the target’s movement for that turn.</p><p>The spell ends if you attack any other creature, if you cast a spell that targets a hostile creature other than the target, if a creature friendly to you damages the target or casts a harmful spell on it, or if you end your turn more than 30 feet away from the target.</p>",
+    "desc": "<p>You attempt to compel a creature into a duel. One creature that you can see within range must make a wisdom saving throw. On a failed save, the creature is drawn to you, compelled by your divine demand. For the duration, it has disadvantage on attack rolls against creatures other than you, and must make a wisdom saving throw each time it attempts to move into a space that is more than 30 feet away from you; if it succeeds on this saving throw, the spell doesn\u00e2\u20ac\u2122t restrict the target\u00e2\u20ac\u2122s movement for that turn.</p><p>The spell ends if you attack any other creature, if you cast a spell that targets a hostile creature other than the target, if a creature friendly to you damages the target or casts a harmful spell on it, or if you end your turn more than 30 feet away from the target.</p>",
     "range": "30 feet",
     "ritual": false,
     "duration": "Concentration, up to 1 minute",
@@ -2095,7 +2171,7 @@ var spells = [
   },
   {
     "name": "Conjure Hezrou",
-    "desc": "<p>You summon a hezrou that appears in an unoccupied space you can see within range. The hezrou disappears when it drops to 0 hit points or when the spell ends.</p><p>The hezrou’s attitude depends on the value of the food used as a material component for this spell. Roll initiative for the hezrou, which has its own turns. At the start of the hezrou’s turn, the DM makes a secret Charisma check on your behalf, with a bonus equal to the food’s value divided by 20. The check DC starts at 10 and increases by 2 each round. You can issue orders to the hezrou and have it obey you as long as you succeed on the Charisma check.</p><p>If the check fails, the spell no longer requires concentration and the demon is no longer under your control. The hezrou then focuses on devouring any corpses it can see. If there are no such meals at hand, it attacks the nearest creatures and eats anything it kills. If its hit points are reduced to below half its hit point maximum, it returns to the Abyss.</p><p>As part of casting the spell, you can scribe a circle on the ground using the blood of an intelligent humanoid slain within the past 24 hours. The circle is large enough to encompass your space. The summoned hezrou cannot cross the circle or target anyone in it while the spell lasts.</p>",
+    "desc": "<p>You summon a hezrou that appears in an unoccupied space you can see within range. The hezrou disappears when it drops to 0 hit points or when the spell ends.</p><p>The hezrou\u00e2\u20ac\u2122s attitude depends on the value of the food used as a material component for this spell. Roll initiative for the hezrou, which has its own turns. At the start of the hezrou\u00e2\u20ac\u2122s turn, the DM makes a secret Charisma check on your behalf, with a bonus equal to the food\u00e2\u20ac\u2122s value divided by 20. The check DC starts at 10 and increases by 2 each round. You can issue orders to the hezrou and have it obey you as long as you succeed on the Charisma check.</p><p>If the check fails, the spell no longer requires concentration and the demon is no longer under your control. The hezrou then focuses on devouring any corpses it can see. If there are no such meals at hand, it attacks the nearest creatures and eats anything it kills. If its hit points are reduced to below half its hit point maximum, it returns to the Abyss.</p><p>As part of casting the spell, you can scribe a circle on the ground using the blood of an intelligent humanoid slain within the past 24 hours. The circle is large enough to encompass your space. The summoned hezrou cannot cross the circle or target anyone in it while the spell lasts.</p>",
     "range": "60 feet",
     "ritual": false,
     "duration": "Concentration, up to 1 hour",
@@ -2252,7 +2328,7 @@ var spells = [
   },
   {
     "name": "Conjure Vrock",
-    "desc": "<p>You summon a vrock that appears in an unoccupied space you can see within range. The vrock disappears when it drops to 0 hit points or when the spell ends.</p><p>The vrock’s attitude depends on the value of the gem used as a material component for this spell. Roll initiative for the vrock, which has its own turns. At the start of the vrock’s turn, the DM makes a secret Charisma check on your behalf, with a bonus equal to the gem’s value divided by 20. The check DC starts at 10 and increases by 2 each round. You can issue orders to the vrock and have it obey you as long as you succeed on the Charisma check.</p><p>If the check fails, the spell no longer requires concentration and the vrock is no longer under your control. The vrock takes no actions on its next turn and uses its telepathy to tell any creature it can see that it will fight in exchange for treasure. The creature that gives the vrock the most expensive gem can command it for the next 1d6 rounds. At the end of that time, it offers the bargain again. If no one offers the vrock treasure before its next turn begins, it attacks the nearest creatures for 1d6 rounds before returning to the Abyss.</p><p>As part of casting the spell, you can scribe a circle on the ground using the blood of an intelligent humanoid slain within the past 24 hours. The circle is large enough to encompass your space. The summoned vrock cannot cross the circle or target anyone in it while the spell lasts.</p>",
+    "desc": "<p>You summon a vrock that appears in an unoccupied space you can see within range. The vrock disappears when it drops to 0 hit points or when the spell ends.</p><p>The vrock\u00e2\u20ac\u2122s attitude depends on the value of the gem used as a material component for this spell. Roll initiative for the vrock, which has its own turns. At the start of the vrock\u00e2\u20ac\u2122s turn, the DM makes a secret Charisma check on your behalf, with a bonus equal to the gem\u00e2\u20ac\u2122s value divided by 20. The check DC starts at 10 and increases by 2 each round. You can issue orders to the vrock and have it obey you as long as you succeed on the Charisma check.</p><p>If the check fails, the spell no longer requires concentration and the vrock is no longer under your control. The vrock takes no actions on its next turn and uses its telepathy to tell any creature it can see that it will fight in exchange for treasure. The creature that gives the vrock the most expensive gem can command it for the next 1d6 rounds. At the end of that time, it offers the bargain again. If no one offers the vrock treasure before its next turn begins, it attacks the nearest creatures for 1d6 rounds before returning to the Abyss.</p><p>As part of casting the spell, you can scribe a circle on the ground using the blood of an intelligent humanoid slain within the past 24 hours. The circle is large enough to encompass your space. The summoned vrock cannot cross the circle or target anyone in it while the spell lasts.</p>",
     "range": "60 feet",
     "ritual": false,
     "duration": "Concentration, up to 1 hour",
@@ -2516,7 +2592,7 @@ var spells = [
   },
   {
     "name": "Cordon of Arrows",
-    "desc": "<p>You plant four pieces of nonmagical ammunition—arrows or crossbow bolts—in the ground within range and lay magic upon them to protect an area. Until the spell ends, whenever a creature other than you comes within 30 feet of the ammunition for the first time on a turn or ends its turn there, one piece of ammunition flies up to strike it. The creature must succeed on a dexterity saving throw or take 1d6 piercing damage. The piece of ammunition is then destroyed. The spell ends when no ammunition remains.</p><p>When you cast this spell, you can designate any creatures you choose, and the spell ignores them.</p>",
+    "desc": "<p>You plant four pieces of nonmagical ammunition\u00e2\u20ac\u201darrows or crossbow bolts\u00e2\u20ac\u201din the ground within range and lay magic upon them to protect an area. Until the spell ends, whenever a creature other than you comes within 30 feet of the ammunition for the first time on a turn or ends its turn there, one piece of ammunition flies up to strike it. The creature must succeed on a dexterity saving throw or take 1d6 piercing damage. The piece of ammunition is then destroyed. The spell ends when no ammunition remains.</p><p>When you cast this spell, you can designate any creatures you choose, and the spell ignores them.</p>",
     "higher_level": "<p>When you cast this spell using a spell slot of 3rd level or higher, the amount of ammunition that can be affected increases by two for each slot level above 2nd.</p>",
     "range": "5 feet",
     "ritual": false,
@@ -2994,7 +3070,7 @@ var spells = [
   },
   {
     "name": "Destructive Wave",
-    "desc": "<p>You strike the ground, creating a burst of divine energy that ripples outward from you. Each creature you choose within 30 feet of you must succeed on a constitution saving throw or take 5d6 thunder damage, as well as 5d6 radiant or necrotic damage (your choice), and be knocked prone. A creature that succeeds on its saving throw takes half as much damage and isn’t knocked prone.</p>",
+    "desc": "<p>You strike the ground, creating a burst of divine energy that ripples outward from you. Each creature you choose within 30 feet of you must succeed on a constitution saving throw or take 5d6 thunder damage, as well as 5d6 radiant or necrotic damage (your choice), and be knocked prone. A creature that succeeds on its saving throw takes half as much damage and isn\u00e2\u20ac\u2122t knocked prone.</p>",
     "range": "Self",
     "ritual": false,
     "duration": "Instantaneous",
@@ -3303,7 +3379,7 @@ var spells = [
   },
   {
     "name": "Dissonant Whispers",
-    "desc": "<p>You whisper a discordant melody that only one creature of your choice within range can hear, wracking it with terrible pain. The target must make a wisdom saving throw. On a failed save, it takes 3d6 psychic damage and must immediately use its reaction, if available, to move as far as its speed allows away from you. The creature doesn’t move into obviously dangerous ground, such as a fire or a pit. On a successful save, the target takes half as much damage and doesn’t have to move away. A deafened creature automatically succeeds on the save.</p>",
+    "desc": "<p>You whisper a discordant melody that only one creature of your choice within range can hear, wracking it with terrible pain. The target must make a wisdom saving throw. On a failed save, it takes 3d6 psychic damage and must immediately use its reaction, if available, to move as far as its speed allows away from you. The creature doesn\u00e2\u20ac\u2122t move into obviously dangerous ground, such as a fire or a pit. On a successful save, the target takes half as much damage and doesn\u00e2\u20ac\u2122t have to move away. A deafened creature automatically succeeds on the save.</p>",
     "higher_level": "<p>When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st.</p>",
     "range": "60 feet",
     "ritual": false,
@@ -3460,7 +3536,7 @@ var spells = [
   },
   {
     "name": "Drawmij's Instant Summons",
-    "desc": "<p>You touch an object weighing 10 pounds or less whose longest dimension is 6 feet or less. The spell leaves an invisible mark on its surface and invisibly inscribes the name of the item on the sapphire you use as the material component. Each time you cast this spell, you must use a different sapphire.</p><p>At any time thereafter, you can use your action to speak the item’s name and crush the sapphire. The item instantly appears in your hand regardless of physical or planar distances, and the spell ends.</p><p>If another creature is holding or carrying the item, crushing the sapphire doesn’t transport the item to you, but instead you learn who the creature possessing the object is and roughly where that creature is located at that moment.</p><p>Dispel magic or a similar effect successfully applied to the sapphire ends this spell’s effect.</p>",
+    "desc": "<p>You touch an object weighing 10 pounds or less whose longest dimension is 6 feet or less. The spell leaves an invisible mark on its surface and invisibly inscribes the name of the item on the sapphire you use as the material component. Each time you cast this spell, you must use a different sapphire.</p><p>At any time thereafter, you can use your action to speak the item\u00e2\u20ac\u2122s name and crush the sapphire. The item instantly appears in your hand regardless of physical or planar distances, and the spell ends.</p><p>If another creature is holding or carrying the item, crushing the sapphire doesn\u00e2\u20ac\u2122t transport the item to you, but instead you learn who the creature possessing the object is and roughly where that creature is located at that moment.</p><p>Dispel magic or a similar effect successfully applied to the sapphire ends this spell\u00e2\u20ac\u2122s effect.</p>",
     "range": "Touch",
     "ritual": true,
     "duration": "Until dispelled",
@@ -4230,7 +4306,7 @@ var spells = [
   },
   {
     "name": "Feign Death",
-    "desc": "<p>You touch a willing creature and put it into a cataleptic state that is indistinguishable from death.</p><p>For the spell’s duration, or until you use an action to touch the target and dismiss the spell, the target appears dead to all outward inspection and to spells used to determine the target’s status. The target is blinded and incapacitated, and its speed drops to 0. The target has resistance to all damage except psychic damage. If the target is diseased or poisoned when you cast the spell, or becomes diseased or poisoned while under the spell’s effect, the disease and poison have no effect until the spell ends.</p>",
+    "desc": "<p>You touch a willing creature and put it into a cataleptic state that is indistinguishable from death.</p><p>For the spell\u00e2\u20ac\u2122s duration, or until you use an action to touch the target and dismiss the spell, the target appears dead to all outward inspection and to spells used to determine the target\u00e2\u20ac\u2122s status. The target is blinded and incapacitated, and its speed drops to 0. The target has resistance to all damage except psychic damage. If the target is diseased or poisoned when you cast the spell, or becomes diseased or poisoned while under the spell\u00e2\u20ac\u2122s effect, the disease and poison have no effect until the spell ends.</p>",
     "range": "Touch",
     "ritual": true,
     "duration": "1 hour",
@@ -4328,7 +4404,7 @@ var spells = [
     "verbal": true,
     "material": true,
     "somatic": true,
-    "material_desc": "a set of divinatory tools—such as bones, ivory sticks, cards, teeth, or carved runes—worth 100gp and an object from the location you wish to find",
+    "material_desc": "a set of divinatory tools\u00e2\u20ac\u201dsuch as bones, ivory sticks, cards, teeth, or carved runes\u00e2\u20ac\u201dworth 100gp and an object from the location you wish to find",
     "material_cost": true,
     "source": "PHB",
     "page": 240
@@ -4846,7 +4922,7 @@ var spells = [
   },
   {
     "name": "Friends",
-    "desc": "<p>For the duration, you have advantage on all Charisma checks directed at one creature of your choice that isn’t hostile toward you. When the spell ends, the creature realizes that you have used magic to influence its mood and becomes hostile toward you. A creature prone to violence might attack you. Another creature might seek retribution in other ways (at the DM’s discretion), depending on the nature of your interaction with it.</p>",
+    "desc": "<p>For the duration, you have advantage on all Charisma checks directed at one creature of your choice that isn\u00e2\u20ac\u2122t hostile toward you. When the spell ends, the creature realizes that you have used magic to influence its mood and becomes hostile toward you. A creature prone to violence might attack you. Another creature might seek retribution in other ways (at the DM\u00e2\u20ac\u2122s discretion), depending on the nature of your interaction with it.</p>",
     "range": "Self",
     "ritual": false,
     "duration": "Concentration, up to 1 minute",
@@ -5009,7 +5085,7 @@ var spells = [
     "verbal": true,
     "material": true,
     "somatic": true,
-    "material_desc": "a pinch of salt and one copper piece placed on each of the corpse’s eyes, which must remain there for the duration",
+    "material_desc": "a pinch of salt and one copper piece placed on each of the corpse\u00e2\u20ac\u2122s eyes, which must remain there for the duration",
     "material_cost": false,
     "source": "PHB",
     "page": 245
@@ -5537,7 +5613,7 @@ var spells = [
     "verbal": true,
     "material": true,
     "somatic": true,
-    "material_desc": "a stone, a twig, and a bit of green plant.</p><p>You make natural terrain in a 150-foot cube in range look, sound, and smell like some other sort of natural terrain. Thus, open fields or a road can be made to resemble a swamp, hill, crevasse, or some other difficult or impassable terrain. A pond can be made to seem like a grassy meadow, a precipice like a gentle slope, or a rock-strewn gully like a wide and smooth road. Manufactured structures, equipment, and creatures within the area aren’t changed in appearance",
+    "material_desc": "a stone, a twig, and a bit of green plant.</p><p>You make natural terrain in a 150-foot cube in range look, sound, and smell like some other sort of natural terrain. Thus, open fields or a road can be made to resemble a swamp, hill, crevasse, or some other difficult or impassable terrain. A pond can be made to seem like a grassy meadow, a precipice like a gentle slope, or a rock-strewn gully like a wide and smooth road. Manufactured structures, equipment, and creatures within the area aren\u00e2\u20ac\u2122t changed in appearance",
     "material_cost": false,
     "source": "PHB",
     "page": 249
@@ -5882,7 +5958,7 @@ var spells = [
     "verbal": true,
     "material": true,
     "somatic": true,
-    "material_desc": "a tiny reliquary worth at least 1,000gp containing a sacred relic, such as a scrap of cloth from a saint’s robe or a piece of parchment from a religious text",
+    "material_desc": "a tiny reliquary worth at least 1,000gp containing a sacred relic, such as a scrap of cloth from a saint\u00e2\u20ac\u2122s robe or a piece of parchment from a religious text",
     "material_cost": true,
     "source": "PHB",
     "page": 251
@@ -6402,7 +6478,7 @@ var spells = [
     "verbal": true,
     "material": true,
     "somatic": true,
-    "material_desc": "a grasshopper’s hind leg",
+    "material_desc": "a grasshopper\u00e2\u20ac\u2122s hind leg",
     "material_cost": false,
     "source": "PHB",
     "page": 254
@@ -6489,7 +6565,7 @@ var spells = [
   },
   {
     "name": "Leomund's Tiny Hut",
-    "desc": "<p>A 10-foot-radius immobile dome of force springs into existence around and above you and remains stationary for the duration. The spell ends if you leave its area.</p><p>Nine creatures of Medium size or smaller can fit inside the dome with you. The spell fails if its area includes a larger creature or more than nine creatures. Creatures and objects within the dome when you cast this spell can move through it freely. All other creatures and objects are barred from passing through it. Spells and other magical effects can’t extend through the dome or be cast through it. The atmosphere inside the space is comfortable and dry, regardless of the weather outside.</p><p>Until the spell ends, you can command the interior to become dimly lit or dark. The dome is opaque from the outside, of any color you choose, but it is transparent from the inside.</p>",
+    "desc": "<p>A 10-foot-radius immobile dome of force springs into existence around and above you and remains stationary for the duration. The spell ends if you leave its area.</p><p>Nine creatures of Medium size or smaller can fit inside the dome with you. The spell fails if its area includes a larger creature or more than nine creatures. Creatures and objects within the dome when you cast this spell can move through it freely. All other creatures and objects are barred from passing through it. Spells and other magical effects can\u00e2\u20ac\u2122t extend through the dome or be cast through it. The atmosphere inside the space is comfortable and dry, regardless of the weather outside.</p><p>Until the spell ends, you can command the interior to become dimly lit or dark. The dome is opaque from the outside, of any color you choose, but it is transparent from the inside.</p>",
     "range": "Self",
     "ritual": true,
     "duration": "8 hours",
@@ -6603,7 +6679,7 @@ var spells = [
   },
   {
     "name": "Lightning Arrow",
-    "desc": "<p>The next time you make a ranged weapon attack during the spell’s duration, the weapon’s ammunition, or the weapon itself if it’s a thrown weapon, transforms into a bolt of lightning. Make the attack roll as normal. The target takes 4d8 lightning damage on a hit, or half as much damage on a miss, instead of the weapon’s normal damage.</p><p>Whether you hit or miss, each creature within 10 feet of the target must make a dexterity saving throw. Each of these creatures takes 2d8 lightning damage on a failed save, or half as much damage on a successful one.</p><p>The piece of ammunition or weapon then returns to its normal form.</p>",
+    "desc": "<p>The next time you make a ranged weapon attack during the spell\u00e2\u20ac\u2122s duration, the weapon\u00e2\u20ac\u2122s ammunition, or the weapon itself if it\u00e2\u20ac\u2122s a thrown weapon, transforms into a bolt of lightning. Make the attack roll as normal. The target takes 4d8 lightning damage on a hit, or half as much damage on a miss, instead of the weapon\u00e2\u20ac\u2122s normal damage.</p><p>Whether you hit or miss, each creature within 10 feet of the target must make a dexterity saving throw. Each of these creatures takes 2d8 lightning damage on a failed save, or half as much damage on a successful one.</p><p>The piece of ammunition or weapon then returns to its normal form.</p>",
     "higher_level": "<p>When you cast this spell using a spell slot of 4th level or higher, the damage for both effects of the spell increases by 1d8 for each slot level above 3rd.</p>",
     "range": "Self",
     "ritual": false,
@@ -7172,7 +7248,7 @@ var spells = [
     "verbal": true,
     "material": true,
     "somatic": false,
-    "material_desc": "a snake’s tongue and either a bit of honeycomb or a drop of sweet oil",
+    "material_desc": "a snake\u00e2\u20ac\u2122s tongue and either a bit of honeycomb or a drop of sweet oil",
     "material_cost": false,
     "source": "PHB",
     "page": 258
@@ -7286,7 +7362,7 @@ var spells = [
     "verbal": true,
     "material": true,
     "somatic": true,
-    "material_desc": "powdered rhubarb leaf and an adder’s stomach",
+    "material_desc": "powdered rhubarb leaf and an adder\u00e2\u20ac\u2122s stomach",
     "material_cost": false,
     "source": "PHB",
     "page": 259
@@ -7690,7 +7766,7 @@ var spells = [
   },
   {
     "name": "Mordenkainen's Magnificent Mansion",
-    "desc": "<p>You conjure an extradimensional dwelling in range that lasts for the duration. You choose where its one entrance is located. The entrance shimmers faintly and is 5 feet wide and 10 feet tall. You and any creature you designate when you cast the spell can enter the extradimensional dwelling as long as the portal remains open. You can open or close the portal if you are within 30 feet of it. While closed, the portal is invisible.</p><p>Beyond the portal is a magnificent foyer with numerous chambers beyond. The atmosphere is clean, fresh, and warm.</p><p>You can create any floor plan you like, but the space can’t exceed 50 cubes, each cube being 10 feet on each side. The place is furnished and decorated as you choose. It contains sufficient food to serve a nine course banquet for up to 100 people. A staff of 100 near-transparent servants attends all who enter. You decide the visual appearance of these servants and their attire. They are completely obedient to your orders. Each servant can perform any task a normal human servant could perform, but they can’t attack or take any action that would directly harm another creature. Thus the servants can fetch things, clean, mend, fold clothes, light fires, serve food, pour wine, and so on. The servants can go anywhere in the mansion but can’t leave it. Furnishings and other objects created by this spell dissipate into smoke if removed from the mansion. When the spell ends, any creatures inside the extradimensional space are expelled into the open spaces nearest to the entrance.</p>",
+    "desc": "<p>You conjure an extradimensional dwelling in range that lasts for the duration. You choose where its one entrance is located. The entrance shimmers faintly and is 5 feet wide and 10 feet tall. You and any creature you designate when you cast the spell can enter the extradimensional dwelling as long as the portal remains open. You can open or close the portal if you are within 30 feet of it. While closed, the portal is invisible.</p><p>Beyond the portal is a magnificent foyer with numerous chambers beyond. The atmosphere is clean, fresh, and warm.</p><p>You can create any floor plan you like, but the space can\u00e2\u20ac\u2122t exceed 50 cubes, each cube being 10 feet on each side. The place is furnished and decorated as you choose. It contains sufficient food to serve a nine course banquet for up to 100 people. A staff of 100 near-transparent servants attends all who enter. You decide the visual appearance of these servants and their attire. They are completely obedient to your orders. Each servant can perform any task a normal human servant could perform, but they can\u00e2\u20ac\u2122t attack or take any action that would directly harm another creature. Thus the servants can fetch things, clean, mend, fold clothes, light fires, serve food, pour wine, and so on. The servants can go anywhere in the mansion but can\u00e2\u20ac\u2122t leave it. Furnishings and other objects created by this spell dissipate into smoke if removed from the mansion. When the spell ends, any creatures inside the extradimensional space are expelled into the open spaces nearest to the entrance.</p>",
     "range": "300 feet",
     "ritual": false,
     "duration": "24 hours",
@@ -7716,7 +7792,7 @@ var spells = [
   },
   {
     "name": "Mordenkainen's Private Sanctum",
-    "desc": "<p>You make an area within range magically secure. The area is a cube that can be as small as 5 feet to as large as 100 feet on each side. The spell lasts for the duration or until you use an action to dismiss it.</p><p>until you use an action to dismiss it. When you cast the spell, you decide what sort of security the spell provides, choosing any or all of the following properties:</p><ul><li>Sound can't pass through the barrier at the edge of the warded area.</li><li>The barrier of the warded area appears dark and foggy, preventing vision (including darkvision) through it.</li><li>Sensors created by divination spells can’t appear inside the protected area or pass through the barrier at its perimeter.</li><li>Creatures in the area can’t be targeted by divination spells.</li><li>Nothing can teleport into or out of the warded area.</li><li>Planar travel is blocked within the warded area.</li></ul><p>Casting this spell on the same spot every day for a year makes this effect permanent.</p>",
+    "desc": "<p>You make an area within range magically secure. The area is a cube that can be as small as 5 feet to as large as 100 feet on each side. The spell lasts for the duration or until you use an action to dismiss it.</p><p>until you use an action to dismiss it. When you cast the spell, you decide what sort of security the spell provides, choosing any or all of the following properties:</p><ul><li>Sound can't pass through the barrier at the edge of the warded area.</li><li>The barrier of the warded area appears dark and foggy, preventing vision (including darkvision) through it.</li><li>Sensors created by divination spells can\u00e2\u20ac\u2122t appear inside the protected area or pass through the barrier at its perimeter.</li><li>Creatures in the area can\u00e2\u20ac\u2122t be targeted by divination spells.</li><li>Nothing can teleport into or out of the warded area.</li><li>Planar travel is blocked within the warded area.</li></ul><p>Casting this spell on the same spot every day for a year makes this effect permanent.</p>",
     "higher_level": "<p>When you cast this spell using a spell slot of 5th level or higher, you can increase the size of the cube by 100 feet for each slot level beyond 4th. Thus you could protect a cube that can be up to 200 feet on one side by using a spell slot of 5th level.</p>",
     "range": "120 feet",
     "ritual": false,
@@ -7788,7 +7864,7 @@ var spells = [
     "verbal": true,
     "material": true,
     "somatic": true,
-    "material_desc": "an iron blade and a small bag containing a mixture of soils—clay, loam, and sand",
+    "material_desc": "an iron blade and a small bag containing a mixture of soils\u00e2\u20ac\u201dclay, loam, and sand",
     "material_cost": false,
     "source": "PHB",
     "page": 263
@@ -7829,7 +7905,7 @@ var spells = [
   },
   {
     "name": "Nystul's Magic Aura",
-    "desc": "<p>You place an illusion on a creature or an object you touch so that divination spells reveal false information about it. The target can be a willing creature or an object that isn’t being carried or worn by another creature.</p><p>When you cast the spell, choose one or both of the following effects. The effect lasts for the duration. If you cast this spell on the same creature or object every day for 30 days, placing the same effect on it each time, the illusion lasts until it is dispelled.</p><p><b>False Aura.</b> You change the way the target appears to spells and magical effects, such as detect magic, that detect magical auras. You can make a nonmagical object appear magical, a magical object appear nonmagical, or change the object’s magical aura so that it appears to belong to a specific school of magic that you choose. When you use this effect on an object, you can make the false magic apparent to any creature that handles the item.</p><p><b>Mask.</b> You change the way the target appears to spells and magical effects that detect creature types, such as a paladin’s Divine Sense or the trigger of a symbol spell. You choose a creature type and other spells and magical effects treat the target as if it were a creature of that type or of that alignment.</p>",
+    "desc": "<p>You place an illusion on a creature or an object you touch so that divination spells reveal false information about it. The target can be a willing creature or an object that isn\u00e2\u20ac\u2122t being carried or worn by another creature.</p><p>When you cast the spell, choose one or both of the following effects. The effect lasts for the duration. If you cast this spell on the same creature or object every day for 30 days, placing the same effect on it each time, the illusion lasts until it is dispelled.</p><p><b>False Aura.</b> You change the way the target appears to spells and magical effects, such as detect magic, that detect magical auras. You can make a nonmagical object appear magical, a magical object appear nonmagical, or change the object\u00e2\u20ac\u2122s magical aura so that it appears to belong to a specific school of magic that you choose. When you use this effect on an object, you can make the false magic apparent to any creature that handles the item.</p><p><b>Mask.</b> You change the way the target appears to spells and magical effects that detect creature types, such as a paladin\u00e2\u20ac\u2122s Divine Sense or the trigger of a symbol spell. You choose a creature type and other spells and magical effects treat the target as if it were a creature of that type or of that alignment.</p>",
     "range": "Touch",
     "ritual": false,
     "duration": "24 hours",
@@ -7854,7 +7930,7 @@ var spells = [
   },
   {
     "name": "Otiluke's Freezing Sphere",
-    "desc": "<p>A frigid globe of cold energy streaks from your fingertips to a point of your choice within range, where it explodes in a 60-foot-radius sphere. Each creature within the area must make a constitution saving throw. On a failed save, a creature takes 10d6 cold damage. On a successful save, it takes half as much damage.</p><p>If the globe strikes a body of water or a liquid that is principally water (not including water-based creatures), it freezes the liquid to a depth of 6 inches over an area 30 feet square. This ice lasts for 1 minute. Creatures that were swimming on the surface of frozen water are trapped in the ice. A trapped creature can use an action to make a Strength check against your spell save DC to break free.</p><p>You can refrain from firing the globe after completing the spell, if you wish. A small globe about the size of a sling stone, cool to the touch, appears in your hand. At any time, you or a creature you give the globe to can throw the globe (to a range of 40 feet) or hurl it with a sling (to the sling’s normal range). It shatters on impact, with the same effect as the normal casting of the spell. You can also set the globe down without shattering it. After 1 minute, if the globe hasn’t already shattered, it explodes.</p>",
+    "desc": "<p>A frigid globe of cold energy streaks from your fingertips to a point of your choice within range, where it explodes in a 60-foot-radius sphere. Each creature within the area must make a constitution saving throw. On a failed save, a creature takes 10d6 cold damage. On a successful save, it takes half as much damage.</p><p>If the globe strikes a body of water or a liquid that is principally water (not including water-based creatures), it freezes the liquid to a depth of 6 inches over an area 30 feet square. This ice lasts for 1 minute. Creatures that were swimming on the surface of frozen water are trapped in the ice. A trapped creature can use an action to make a Strength check against your spell save DC to break free.</p><p>You can refrain from firing the globe after completing the spell, if you wish. A small globe about the size of a sling stone, cool to the touch, appears in your hand. At any time, you or a creature you give the globe to can throw the globe (to a range of 40 feet) or hurl it with a sling (to the sling\u00e2\u20ac\u2122s normal range). It shatters on impact, with the same effect as the normal casting of the spell. You can also set the globe down without shattering it. After 1 minute, if the globe hasn\u00e2\u20ac\u2122t already shattered, it explodes.</p>",
     "higher_level": "<p>When you cast this spell using a spell slot of 7th level or higher, the damage increases by 1d6 for each slot level above 6th.</p>",
     "range": "300 feet",
     "ritual": false,
@@ -7880,7 +7956,7 @@ var spells = [
   },
   {
     "name": "Otiluke's Resilient Sphere",
-    "desc": "<p>A sphere of shimmering force encloses a creature or object of Large size or smaller within range. An unwilling creature must make a dexterity saving throw. On a failed save, the creature is enclosed for the duration.</p><p>Nothing—not physical objects, energy, or other spell effects—can pass through the barrier, in or out, though a creature in the sphere can breathe there. The sphere is immune to all damage, and a creature or object inside can’t be damaged by attacks or effects originating from outside, nor can a creature inside the sphere damage anything outside it.</p><p>The sphere is weightless and just large enough to contain the creature or object inside. An enclosed creature can use its action to push against the sphere’s walls and thus roll the sphere at up to half the creature’s speed. Similarly, the globe can be picked up and moved by other creatures.</p><p>A disintegrate spell targeting the globe destroys it without harming anything inside it.</p>",
+    "desc": "<p>A sphere of shimmering force encloses a creature or object of Large size or smaller within range. An unwilling creature must make a dexterity saving throw. On a failed save, the creature is enclosed for the duration.</p><p>Nothing\u00e2\u20ac\u201dnot physical objects, energy, or other spell effects\u00e2\u20ac\u201dcan pass through the barrier, in or out, though a creature in the sphere can breathe there. The sphere is immune to all damage, and a creature or object inside can\u00e2\u20ac\u2122t be damaged by attacks or effects originating from outside, nor can a creature inside the sphere damage anything outside it.</p><p>The sphere is weightless and just large enough to contain the creature or object inside. An enclosed creature can use its action to push against the sphere\u00e2\u20ac\u2122s walls and thus roll the sphere at up to half the creature\u00e2\u20ac\u2122s speed. Similarly, the globe can be picked up and moved by other creatures.</p><p>A disintegrate spell targeting the globe destroys it without harming anything inside it.</p>",
     "range": "30 feet",
     "ritual": false,
     "duration": "Concentration, up to 1 minute",
@@ -7997,7 +8073,7 @@ var spells = [
   },
   {
     "name": "Phantasmal Force",
-    "desc": "<p>You craft an illusion that takes root in the mind of a creature that you can see within range. The target must make an intelligence saving throw. On a failed save, you create a phantasmal object, creature, or other visible phenomenon of your choice that is no larger than a 10-foot cube and that is perceivable only to the target for the duration. This spell has no effect on undead or constructs.</p><p>The phantasm includes sound, temperature, and other stimuli, also evident only to the creature.</p><p>The target can use its action to examine the phantasm with an Intelligence (Investigation) check against your spell save DC. If the check succeeds, the target realizes that the phantasm is an illusion, and the spell ends.</p><p>While a target is affected by the spell, the target treats the phantasm as if it were real. The target rationalizes any illogical outcomes from interacting with the phantasm. For example, a target attempting to walk across a phantasmal bridge that spans a chasm falls once it steps onto the bridge. If the target survives the fall, it still believes that the bridge exists and comes up with some other explanation for its fall—it was pushed, it slipped, or a strong wind might have knocked it off.</p><p>An affected target is so convinced of the phantasm's reality that it can even take damage from the illusion. A phantasm created to appear as a creature can attack the target. Similarly, a phantasm created to appear as fire, a pool of acid, or lava can burn the target. Each round on your turn, the phantasm can deal 1d6 psychic damage to the target if it is in the phantasm's area or within 5 feet of the phantasm, provided that the illusion is of a creature or hazard that could logically deal damage, such as by attacking. The target perceives the damage as a type appropriate to the illusion.</p>",
+    "desc": "<p>You craft an illusion that takes root in the mind of a creature that you can see within range. The target must make an intelligence saving throw. On a failed save, you create a phantasmal object, creature, or other visible phenomenon of your choice that is no larger than a 10-foot cube and that is perceivable only to the target for the duration. This spell has no effect on undead or constructs.</p><p>The phantasm includes sound, temperature, and other stimuli, also evident only to the creature.</p><p>The target can use its action to examine the phantasm with an Intelligence (Investigation) check against your spell save DC. If the check succeeds, the target realizes that the phantasm is an illusion, and the spell ends.</p><p>While a target is affected by the spell, the target treats the phantasm as if it were real. The target rationalizes any illogical outcomes from interacting with the phantasm. For example, a target attempting to walk across a phantasmal bridge that spans a chasm falls once it steps onto the bridge. If the target survives the fall, it still believes that the bridge exists and comes up with some other explanation for its fall\u00e2\u20ac\u201dit was pushed, it slipped, or a strong wind might have knocked it off.</p><p>An affected target is so convinced of the phantasm's reality that it can even take damage from the illusion. A phantasm created to appear as a creature can attack the target. Similarly, a phantasm created to appear as fire, a pool of acid, or lava can burn the target. Each round on your turn, the phantasm can deal 1d6 psychic damage to the target if it is in the phantasm's area or within 5 feet of the phantasm, provided that the illusion is of a creature or hazard that could logically deal damage, such as by attacking. The target perceives the damage as a type appropriate to the illusion.</p>",
     "range": "60 feet",
     "ritual": false,
     "duration": "Concentration, up to 1 minute",
@@ -8711,7 +8787,7 @@ var spells = [
   },
   {
     "name": "Rary's Telepathic Bond",
-    "desc": "<p>You forge a telepathic link among up to eight willing creatures of your choice within range, psychically linking each creature to all the others for the duration. Creatures with Intelligence scores of 2 or less aren’t affected by this spell.</p><p>Until the spell ends, the targets can communicate telepathically through the bond whether or not they have a common language. The communication is possible over any distance, though it can’t extend to other planes of existence.</p>",
+    "desc": "<p>You forge a telepathic link among up to eight willing creatures of your choice within range, psychically linking each creature to all the others for the duration. Creatures with Intelligence scores of 2 or less aren\u00e2\u20ac\u2122t affected by this spell.</p><p>Until the spell ends, the targets can communicate telepathically through the bond whether or not they have a common language. The communication is possible over any distance, though it can\u00e2\u20ac\u2122t extend to other planes of existence.</p>",
     "range": "30 feet",
     "ritual": true,
     "duration": "1 hour",
@@ -9156,7 +9232,7 @@ var spells = [
   },
   {
     "name": "Searing Smite",
-    "desc": "<p>The next time you hit a creature with a melee weapon attack during the spell’s duration, your weapon flares with white-hot intensity, and the attack deals an extra 1d6 fire damage to the target and causes the target to ignite in flames. At the start of each of its turns until the spell ends, the target must make a constitution saving throw. On a failed save, it takes 1d6 fire damage. On a successful save, the spell ends. If the target or a creature within 5 feet of it uses an action to put out the flames, or if some other effect douses the flames (such as the target being submerged in water), the spell ends.</p>",
+    "desc": "<p>The next time you hit a creature with a melee weapon attack during the spell\u00e2\u20ac\u2122s duration, your weapon flares with white-hot intensity, and the attack deals an extra 1d6 fire damage to the target and causes the target to ignite in flames. At the start of each of its turns until the spell ends, the target must make a constitution saving throw. On a failed save, it takes 1d6 fire damage. On a successful save, the spell ends. If the target or a creature within 5 feet of it uses an action to put out the flames, or if some other effect douses the flames (such as the target being submerged in water), the spell ends.</p>",
     "higher_level": "<p>When you cast this spell using a spell slot of 2nd level or higher, the initial extra damage dealt by the attack increases by 1d6 for each slot level above 1st.</p>",
     "range": "Self",
     "ritual": false,
@@ -9565,7 +9641,7 @@ var spells = [
     "verbal": true,
     "material": true,
     "somatic": true,
-    "material_desc": "snow or ice in quantities sufficient to made a life-size copy of the duplicated creature; some hair, fingernail clippings, or other piece of that creature’s body placed inside the snow or ice; and powdered ruby worth 1,500 gp, sprinkled over the duplicate and consumed by the spell",
+    "material_desc": "snow or ice in quantities sufficient to made a life-size copy of the duplicated creature; some hair, fingernail clippings, or other piece of that creature\u00e2\u20ac\u2122s body placed inside the snow or ice; and powdered ruby worth 1,500 gp, sprinkled over the duplicate and consumed by the spell",
     "material_cost": true,
     "source": "PHB",
     "page": 276
@@ -9976,7 +10052,7 @@ var spells = [
   },
   {
     "name": "Staggering Smite",
-    "desc": "<p>The next time you hit a creature with a melee weapon attack during this spell’s duration, your weapon pierces both body and mind, and the attack deals an extra 4d6 psychic damage to the target. The target must make a wisdom saving throw. On a failed save, it has disadvantage on attack rolls and ability checks, and can't take reactions, until the end of its next turn.</p>",
+    "desc": "<p>The next time you hit a creature with a melee weapon attack during this spell\u00e2\u20ac\u2122s duration, your weapon pierces both body and mind, and the attack deals an extra 4d6 psychic damage to the target. The target must make a wisdom saving throw. On a failed save, it has disadvantage on attack rolls and ability checks, and can't take reactions, until the end of its next turn.</p>",
     "range": "Self",
     "ritual": false,
     "duration": "Concentration, up to 1 minute",
@@ -10188,7 +10264,7 @@ var spells = [
     "verbal": true,
     "material": true,
     "somatic": false,
-    "material_desc": "a snake’s tongue and either a bit of honeycomb or a drop of sweet oil",
+    "material_desc": "a snake\u00e2\u20ac\u2122s tongue and either a bit of honeycomb or a drop of sweet oil",
     "material_cost": false,
     "source": "PHB",
     "page": 279
@@ -10326,7 +10402,7 @@ var spells = [
   },
   {
     "name": "Tasha's Hideous Laughter",
-    "desc": "<p>A creature of your choice that you can see within range perceives everything as hilariously funny and falls into fits of laughter if this spell affects it. The target must succeed on a wisdom saving throw or fall prone, becoming incapacitated and unable to stand up for the duration. A creature with an Intelligence score of 4 or less isn’t affected.</p><p>At the end of each of its turns, and each time it takes damage, the target can make another wisdom saving throw. The target had advantage on the saving throw if it’s triggered by damage. On a success, the spell ends.</p>",
+    "desc": "<p>A creature of your choice that you can see within range perceives everything as hilariously funny and falls into fits of laughter if this spell affects it. The target must succeed on a wisdom saving throw or fall prone, becoming incapacitated and unable to stand up for the duration. A creature with an Intelligence score of 4 or less isn\u00e2\u20ac\u2122t affected.</p><p>At the end of each of its turns, and each time it takes damage, the target can make another wisdom saving throw. The target had advantage on the saving throw if it\u00e2\u20ac\u2122s triggered by damage. On a success, the spell ends.</p>",
     "range": "30 feet",
     "ritual": false,
     "duration": "Concentration, up to 1 minute",
@@ -10467,7 +10543,7 @@ var spells = [
   },
   {
     "name": "Tenser's Floating Disk",
-    "desc": "<p>This spell creates a circular, horizontal plane of force, 3 feet in diameter and 1 inch thick, that floats 3 feet above the ground in an unoccupied space of your choice that you can see within range. The disk remains for the duration, and can hold up to 500 pounds. If more weight is placed on it, the spell ends, and everything on the disk falls to the ground.</p><p>The disk is immobile while you are within 20 feet of it. If you move more than 20 feet away from it, the disk follows you so that it remains within 20 feet of you. If can move across uneven terrain, up or down stairs, slopes and the like, but it can’t cross an elevation change of 10 feet or more. For example, the disk can’t move across a 10-foot-deep pit, nor could it leave such a pit if it was created at the bottom.</p><p>If you move more than 100 feet away from the disk (typically because it can’t move around an obstacle to follow you), the spell ends.</p>",
+    "desc": "<p>This spell creates a circular, horizontal plane of force, 3 feet in diameter and 1 inch thick, that floats 3 feet above the ground in an unoccupied space of your choice that you can see within range. The disk remains for the duration, and can hold up to 500 pounds. If more weight is placed on it, the spell ends, and everything on the disk falls to the ground.</p><p>The disk is immobile while you are within 20 feet of it. If you move more than 20 feet away from it, the disk follows you so that it remains within 20 feet of you. If can move across uneven terrain, up or down stairs, slopes and the like, but it can\u00e2\u20ac\u2122t cross an elevation change of 10 feet or more. For example, the disk can\u00e2\u20ac\u2122t move across a 10-foot-deep pit, nor could it leave such a pit if it was created at the bottom.</p><p>If you move more than 100 feet away from the disk (typically because it can\u00e2\u20ac\u2122t move around an obstacle to follow you), the spell ends.</p>",
     "range": "30 feet",
     "ritual": true,
     "duration": "1 hour",
@@ -10516,7 +10592,7 @@ var spells = [
   },
   {
     "name": "Thorn Whip",
-    "desc": "<p>You create a long, vine-like whip covered in thorns that lashes out at your command toward a creature in range. Make a melee spell attack against the target. If the attack hits, the creature takes 1d6 piercing damage, and if the creature is Large or smaller, you pull the creature up to 10 feet closer to you.</p><p>This spell’s damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6).</p>",
+    "desc": "<p>You create a long, vine-like whip covered in thorns that lashes out at your command toward a creature in range. Make a melee spell attack against the target. If the attack hits, the creature takes 1d6 piercing damage, and if the creature is Large or smaller, you pull the creature up to 10 feet closer to you.</p><p>This spell\u00e2\u20ac\u2122s damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6).</p>",
     "range": "30 feet",
     "ritual": false,
     "duration": "Instantaneous",
@@ -10541,7 +10617,7 @@ var spells = [
   },
   {
     "name": "Thunderous Smite",
-    "desc": "<p>The first time you hit with a melee weapon attack during this spell’s duration, your weapon rings with thunder that is audible within 300 feet of you, and the attack deals an extra 2d6 thunder damage to the target. Additionally, if the target is a creature, it must succeed on a strength saving throw or be pushed 10 feet away from you and knocked prone.</p>",
+    "desc": "<p>The first time you hit with a melee weapon attack during this spell\u00e2\u20ac\u2122s duration, your weapon rings with thunder that is audible within 300 feet of you, and the attack deals an extra 2d6 thunder damage to the target. Additionally, if the target is a creature, it must succeed on a strength saving throw or be pushed 10 feet away from you and knocked prone.</p>",
     "range": "Self",
     "ritual": false,
     "duration": "Concentration, up to 1 minute",
@@ -10922,7 +10998,7 @@ var spells = [
   },
   {
     "name": "Tsunami",
-    "desc": "<p>A wall of water springs into existence at a point you choose within range. You can make the wall up to 300 feet long, 300 feet high, and 50 feet thick. The wall lasts for the duration.</p><p>When the wall appears, each creature within its area must make a strength saving throw. On a failed save, a creature takes 6 d10 bludgeoning damage, or half as much damage on a successful save.</p><p>At the start of each of your turns after the wall appears, the wall, along with any creatures in it, moves 50 feet away from you. Any Huge or smaller creature inside the wall or whose space the wall enters when it moves must succeed on a strength saving throw or take 5 d10 bludgeoning damage. A creature can take this damage only once per round. At the end of the turn, the wall’s height is reduced by 50 feet, and the damage creatures take from the spell on subsequent rounds is reduced by 1d10. When the wall reaches 0 feet in height, the spell ends.</p><p>A creature caught in the wall can move by swimming. Because of the force of the wave, though, the creature must make a successful Strength (Athletics) check against your spell save DC in order to move at all. If it fails the check, it can’t move. A creature that moves out of the area falls to the ground.</p>",
+    "desc": "<p>A wall of water springs into existence at a point you choose within range. You can make the wall up to 300 feet long, 300 feet high, and 50 feet thick. The wall lasts for the duration.</p><p>When the wall appears, each creature within its area must make a strength saving throw. On a failed save, a creature takes 6 d10 bludgeoning damage, or half as much damage on a successful save.</p><p>At the start of each of your turns after the wall appears, the wall, along with any creatures in it, moves 50 feet away from you. Any Huge or smaller creature inside the wall or whose space the wall enters when it moves must succeed on a strength saving throw or take 5 d10 bludgeoning damage. A creature can take this damage only once per round. At the end of the turn, the wall\u00e2\u20ac\u2122s height is reduced by 50 feet, and the damage creatures take from the spell on subsequent rounds is reduced by 1d10. When the wall reaches 0 feet in height, the spell ends.</p><p>A creature caught in the wall can move by swimming. Because of the force of the wave, though, the creature must make a successful Strength (Athletics) check against your spell save DC in order to move at all. If it fails the check, it can\u00e2\u20ac\u2122t move. A creature that moves out of the area falls to the ground.</p>",
     "range": "Sight",
     "ritual": false,
     "duration": "Concentration, up to 6 rounds",
@@ -11551,7 +11627,7 @@ var spells = [
   },
   {
     "name": "Witch Bolt",
-    "desc": "<p>A beam of crackling, blue energy lances out toward a creature within range, forming a sustained arc of lightning between you and the target. Make a ranged spell attack against that creature. On a hit, the target takes 1d12 lightning damage, and on each of your turns for the duration, you can use your action to deal 1d12 lightning damage to the target automatically. The spell ends if you use your action to do anything else. The spell also ends if the target is ever outside the spell’s range or if it has total cover from you.</p>",
+    "desc": "<p>A beam of crackling, blue energy lances out toward a creature within range, forming a sustained arc of lightning between you and the target. Make a ranged spell attack against that creature. On a hit, the target takes 1d12 lightning damage, and on each of your turns for the duration, you can use your action to deal 1d12 lightning damage to the target automatically. The spell ends if you use your action to do anything else. The spell also ends if the target is ever outside the spell\u00e2\u20ac\u2122s range or if it has total cover from you.</p>",
     "higher_level": "<p>When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d12 for each slot level above 1st.</p>",
     "range": "30 feet",
     "ritual": false,
@@ -11602,7 +11678,7 @@ var spells = [
   },
   {
     "name": "Wrathful Smite",
-    "desc": "<p>The next time you hit with a melee weapon attack during this spell’s duration, your attack deals an extra 1d6 psychic damage. Additionally, if the target is a creature, it must make a wisdom saving throw or be frightened of you until the spell ends. As an action, the creature can make a Wisdom check against your spell save DC to steel its resolve and end this spell.</p>",
+    "desc": "<p>The next time you hit with a melee weapon attack during this spell\u00e2\u20ac\u2122s duration, your attack deals an extra 1d6 psychic damage. Additionally, if the target is a creature, it must make a wisdom saving throw or be frightened of you until the spell ends. As an action, the creature can make a Wisdom check against your spell save DC to steel its resolve and end this spell.</p>",
     "range": "Self",
     "ritual": false,
     "duration": "Concentration, up to 1 minute",
