@@ -503,6 +503,15 @@ $(document).ready(function() {
   $('#filterscag').bind('click',function() { toggleFilter(this, filterSources, 'SCAG') });
   $('#filteruatobm').bind('click',function() { toggleFilter(this, filterSources, 'UA TOBM') });
   $('#filterasis').bind('click',function() { toggleFilter(this, filterSources, 'ASIS') });
+  $('#filteregw').bind('click',function() { toggleFilter(this, filterSources, 'EGW') });
+  $('#filtertce').bind('click',function() { toggleFilter(this, filterSources, 'TCE') });
+  $('#filterscc').bind('click',function() { toggleFilter(this, filterSources, 'SCC') });
+  $('#filterua7mm').bind('click',function() { toggleFilter(this, filterSources, 'UA7MM') });
+  $('#filterxge').bind('click',function() { toggleFilter(this, filterSources, 'XGE') });
+  $('#filterllk').bind('click',function() { toggleFilter(this, filterSources, 'LLK') });
+  $('#filterua70smt').bind('click',function() { toggleFilter(this, filterSources, 'UA70SMT') });
+  $('#filteridrf').bind('click',function() { toggleFilter(this, filterSources, 'IDRF') });
+  $('#filterua78do').bind('click',function() { toggleFilter(this, filterSources, 'UA78DO') });
   $('#clearsources').bind('click', function() {
     $('a.filtersource').removeClass('selected');
     filterSources = new Set();
