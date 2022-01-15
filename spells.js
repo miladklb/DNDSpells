@@ -12040,6 +12040,31 @@ var spells = [
     "page": 69
   },
   {
+    "name": "On/Off",
+    "desc": "<p> This cantrip allows you to activate or deactivate any electronic device within range, as long as the device has a clearly defined on or off function that can be easily accessed from the outside of the device. Any device that requires a software-based shutdown sequence to activate or deactivate cannot be affected by On/Off.</p>",
+    "range": "60 feet",
+    "ritual": false,
+    "duration": "Instantaneous",
+    "concentration": false,
+    "casting_time": "1 action",
+    "level": 0,
+    "school": "Transmutation",
+    "class": [
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
+    ],
+    "level_desc": "Cantrip",
+    "class_desc": "Sorcerer, Warlock, Wizard",
+    "range_desc": "60 feet",
+    "component_desc": "V, S",
+    "verbal": true,
+    "material": false,
+    "somatic": true,
+    "source": "UA7MM",
+    "page": 69
+  },
+  {
     "name": "Snare",
     "desc": "<p> While you cast this spell, you use the cord or rope to create a circle with a 5-foot radius on a flat surface within your reach. When you finish casting, the cord or rope disappears to become a magical trap.\n\nThe trap is nearly invisible and requires a successful Intelligence (Investigation) check against your spell save DC to be found.\n\nThe trap triggers when a Small creature or larger moves into the area protected by the spell. The triggering creature must succeed on a Dexterity saving throw or fall prone and be hoisted into the air until it hangs upside down 3 feet above the protected surface, where it is restrained.\n\nThe restrained creature can make a Dexterity saving throw with disadvantage at the end of each of its turns and ends the restrained effect on a success. Alternatively, another creature that can reach the restrained creature can use an action to make an Intelligence (Arcana) check against your spell save DC. On a success, the restrained effect also ends.</p>",
     "range": "Touch",
