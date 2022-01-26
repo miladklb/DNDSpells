@@ -15,6 +15,12 @@
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         margin: 0;
         padding: 0;
+        color: black;
+
+        background: rgb(0,255,235);
+        background: linear-gradient(90deg, rgba(0,255,235,1) 0%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 75%, rgba(85,9,121,1) 100%);
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/fc/American_pika_%28ochotona_princeps%29_with_a_mouthful_of_flowers.jpg");
+        background-size: contain;
       }
 
       #container {
@@ -54,6 +60,7 @@
         width: 100%;
         margin-top: 1em;
         table-layout: fixed;
+        background-color: rgba(255, 255, 255, 0.59);
       }
 
       thead > tr {
@@ -116,6 +123,7 @@
 
       #filters, #presets, #morerows, #selectinstructions {
         width: 100%;
+        background-color: rgba(255, 255, 255, 0.59);
       }
 
       #morerows, #selectinstructions {
@@ -135,10 +143,11 @@
         -webkit-border-radius: .5em;
         -moz-border-radius: .5em;
         border-radius: .5em;
+        color:purple;
       }
 
       .filterbutton.selected {
-        background: teal;
+        background: purple;
         color: white;
       }
 
