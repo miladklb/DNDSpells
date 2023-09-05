@@ -512,6 +512,7 @@ $(document).ready(function() {
   $('#filterua70smt').bind('click',function() { toggleFilter(this, filterSources, 'UA70SMT') });
   $('#filteridrf').bind('click',function() { toggleFilter(this, filterSources, 'IDRF') });
   $('#filterua78do').bind('click',function() { toggleFilter(this, filterSources, 'UA78DO') });
+  $('#filterfnf').bind('click',function() { toggleFilter(this, filterSources, 'FNF') });
   $('#clearsources').bind('click', function() {
     $('a.filtersource').removeClass('selected');
     filterSources = new Set();
