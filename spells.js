@@ -11722,7 +11722,7 @@ var spells = [
   },
   {
     "name": " Infestation",
-    "desc": "<p> Create a cloud of insects on target creature you can see within range. That creature makes a Con saving throw, on a failed save it takes 1d6 poison damage and moves in a random dirction.</p>",
+    "desc": "<p> Create a cloud of insects on target creature you can see within range. That creature makes a Con saving throw, on a failed save it takes 2d4 poison damage and moves in a random dirction.</p>",
     "range": "30",
     "ritual": false,
     "duration": "Instantaneous",
@@ -11743,7 +11743,7 @@ var spells = [
     "somatic": true,
     "source": "FNF",
     "page": 69,
-    "higher_level": "<p> This spell's damage increases by 1d6 when you reach 5th level.</p>"
+    "higher_level": "<p> This spell's damage increases by 2d4 when you reach 5th level.</p>"
   },
   {
     "name": "Sword Burst",
@@ -11826,7 +11826,7 @@ var spells = [
   },
   {
     "name": "Produce Flame",
-    "desc": "<p> A flickering flame appears in your hand. The flame remains there for the duration and harms neither you nor your equipment. The flame sheds bright light in a 10-foot radius and dim light for an additional 10 feet. The spell ends if you dismiss it as an action or if you cast it again.\nYou can also attack with the flame, although doing so ends the spell. When you cast this spell, or as an action on a later turn, you can hurl the flame at a creature within 30 feet of you. Make a ranged spell attack. On a hit, the target takes 1d8 fire damage.</p>",
+    "desc": "<p> A flickering flame appears in your hand. The flame remains there for the duration and harms neither you nor your equipment. The flame sheds bright light in a 10-foot radius and dim light for an additional 10 feet. The spell ends if you dismiss it as an action or if you cast it again.\nYou can also attack with the flame, although doing so ends the spell. When you cast this spell, or as an action on a later turn, you can hurl the flame at a creature within 30 feet of you. Make a ranged spell attack. On a hit, the target takes 1d10 fire damage.</p>",
     "range": "Self",
     "ritual": false,
     "duration": "10 MInutes",
@@ -11848,7 +11848,7 @@ var spells = [
     "somatic": true,
     "source": "FNF",
     "page": 69,
-    "higher_level": "<p> This spell's damage increases by 1d8 when you reach 5th level</p>"
+    "higher_level": "<p> This spell's damage increases by 1d10 when you reach 5th level</p>"
   },
   {
     "name": "True Strike",
@@ -12007,8 +12007,8 @@ var spells = [
   },
   {
     "name": "Mind Sliver",
-    "desc": "<p> You drive a disorienting spike of psychic energy into the mind of one creature you can see within range. The target must succeed on an Intelligence saving throw or take 1d6 psychic damage and subtract 1d4 from the next saving throw it makes before the end of your next turn.</p>",
-    "range": "Touch",
+    "desc": "<p> You drive a disorienting spike of psychic energy into the mind of one creature you can see within range. The target must succeed on an Intelligence saving throw or take 1d8 psychic damage and subtract 1d4 from the next saving throw it makes before the end of your next turn.</p>",
+    "range": "60 feet",
     "ritual": false,
     "duration": "1 round",
     "concentration": true,
@@ -12022,18 +12022,18 @@ var spells = [
     ],
     "level_desc": "Cantrip",
     "class_desc": "Sorcerer, Warlock, Wizard",
-    "range_desc": "Touch",
+    "range_desc": "60 feet",
     "component_desc": "S",
     "verbal": false,
     "material": false,
     "somatic": true,
     "source": "FNF",
     "page": 69,
-    "higher_level": "<p> This spell's damage increases by 1d6 when you reach 5th level</p>"
+    "higher_level": "<p> This spell's damage increases by 1d8 when you reach 5th level</p>"
   },
   {
     "name": "Vicious Mockery",
-    "desc": "<p> You unleash a string of insults laced with subtle enchantments at a creature you can see within range. If the target can hear you (though it need not understand you), it must succeed on a Wisdom saving throw or take 1d4 psychic damage and have disadvantage on the next attack roll it makes before the end of its next turn.</p>",
+    "desc": "<p> You unleash a string of insults laced with subtle enchantments at a creature you can see within range. If the target can hear you (though it need not understand you), it must succeed on a Wisdom saving throw or take 1d6 psychic damage and have disadvantage on the next attack roll it makes before the end of its next turn.</p>",
     "range": "60 feet",
     "ritual": false,
     "duration": "1 Round",
@@ -12053,7 +12053,7 @@ var spells = [
     "somatic": false,
     "source": "FNF",
     "page": 69,
-    "higher_level": "<p> This spell's damage increases by 1d43 and the target has disadvantage on the next 2 attacks it makes when you reach 5th level.</p>"
+    "higher_level": "<p> This spell's damage increases by 1d6 and the target has disadvantage on the next 2 attacks it makes when you reach 5th level.</p>"
   },
   {
     "name": "Booming Blade",
@@ -12106,7 +12106,7 @@ var spells = [
   },
   {
     "name": "Fire Bolt",
-    "desc": "<p> You hurl a mote of fire at a creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 fire damage. A flammable object hit by this spell ignites if it isn\u2019t being worn or carried.</p>",
+    "desc": "<p> You hurl a mote of fire at a creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes 2d4 fire damage. A flammable object hit by this spell ignites if it isn\u2019t being worn or carried.</p>",
     "range": "60 feet",
     "ritual": false,
     "duration": "Instantaneous",
@@ -12127,7 +12127,7 @@ var spells = [
     "somatic": true,
     "source": "FNF",
     "page": 69,
-    "higher_level": "<p> This spell\u2019s damage increases by 1d10 when you reach 5th level.</p>"
+    "higher_level": "<p> This spell\u2019s damage increases by 2d4 when you reach 5th level.</p>"
   },
   {
     "name": "Frostbite",
@@ -12205,7 +12205,7 @@ var spells = [
   },
   {
     "name": "Shocking Grasp",
-    "desc": "<p> Lightning springs from your hand to deliver a shock to a creature you try to touch. Make a melee spell attack against the target. You have advantage on the attack roll if the target is wearing armor made of metal. On a hit, the target takes 1d8 lightning damage, and it can\u2019t take reactions until the start of its next turn.</p>",
+    "desc": "<p> Lightning springs from your hand to deliver a shock to a creature you try to touch. Make a melee spell attack against the target. You have advantage on the attack roll if the target is wearing armor made of metal. On a hit, the target takes 2d4 lightning damage, and it can\u2019t take reactions until the start of its next turn.</p>",
     "range": "Touch",
     "ritual": false,
     "duration": "Instantaneous",
@@ -12226,7 +12226,7 @@ var spells = [
     "somatic": true,
     "source": "FNF",
     "page": 69,
-    "higher_level": "<p> This spell\u2019s damage increases by 1d8 when you reach 5th level.</p>"
+    "higher_level": "<p> This spell\u2019s damage increases by 2d4 when you reach 5th level.</p>"
   },
   {
     "name": "Toll the Dead",
@@ -12279,33 +12279,8 @@ var spells = [
     "higher_level": "<p> At level 11, this spell's casting time becomes 1 Bonus Action</p>"
   },
   {
-    "name": "Spare the Dying",
-    "desc": "<p> You choose nonmagical flame that you can see within range and that fits within a 5-foot cube. You affect it in one of the following ways:\n\nYou instantaneously expand the flame 5 feet in one direction, provided that wood or other fuel is present in the new location.\nYou instantaneously extinguish the flames within the cube.\nYou double or halve the area of bright light and dim light cast by the flame, change its color, or both. The change lasts for 1 hour.\nYou cause simple shapes\u2014such as the vague form of a creature, an inanimate object, or a location\u2014to appear within the flames and animate as you like. The shapes last for 1 hour.\nIf you cast this spell multiple times, you can have up to three of its non-instantaneous effects active at a time, and you can dismiss such an effect as an action.</p>",
-    "range": "60 feet",
-    "ritual": false,
-    "duration": "Instantaneous or 1 hour",
-    "concentration": false,
-    "casting_time": "1 Action",
-    "level": 0,
-    "school": "Transmutation",
-    "class": [
-      "Druid",
-      "Sorcerer",
-      "Wizard"
-    ],
-    "level_desc": "Cantrip",
-    "class_desc": "Druid, Sorcerer, Wizard",
-    "range_desc": "60 feet",
-    "component_desc": "S",
-    "verbal": false,
-    "material": false,
-    "somatic": true,
-    "source": "FNF",
-    "page": 69
-  },
-  {
     "name": "Primal Savagery",
-    "desc": "<p> You channel primal magic to cause your teeth or fingernails to sharpen, ready to deliver a corrosive attack. Make a melee spell attack against one creature within 5 feet of you. On a hit, the target takes 1d10 acid damage. After you make the attack, your teeth or fingernails return to normal.</p>",
+    "desc": "<p> You channel primal magic to cause your teeth or fingernails to sharpen, ready to deliver a corrosive attack. Make a melee spell attack against one creature within 5 feet of you. On a hit, the target takes 1d12 acid damage. After you make the attack, your teeth or fingernails return to normal.</p>",
     "range": "Self",
     "ritual": false,
     "duration": "Instantaneous",
@@ -12325,7 +12300,7 @@ var spells = [
     "somatic": true,
     "source": "FNF",
     "page": 69,
-    "higher_level": "<p> This spell\u2019s damage increases by 1d10 when you reach 5th level</p>"
+    "higher_level": "<p> This spell\u2019s damage increases by 1d12 when you reach 5th level</p>"
   },
   {
     "name": "Prestigiditation",
@@ -12471,31 +12446,6 @@ var spells = [
     "range_desc": "120 feet",
     "component_desc": "V, S",
     "verbal": true,
-    "material": false,
-    "somatic": true,
-    "source": "FNF",
-    "page": 69
-  },
-  {
-    "name": "Mold Earth",
-    "desc": "<p> You choose a portion of dirt or stone that you can see within range and that fits within a 5-foot cube. You manipulate it in one of the following ways:\n\nIf you target an area of loose earth, you can instantaneously excavate it, move it along the ground, and deposit it up to 5 feet away. This movement doesn\u2019t have enough force to cause damage.\nYou cause shapes, colors, or both to appear on the dirt or stone, spelling out words, creating images, or shaping patterns. The changes last for 1 hour.\nIf the dirt or stone you target is on the ground, you cause it to become difficult terrain. Alternatively, you can cause the ground to become normal terrain if it is already difficult terrain. This change lasts for 1 hour.\nIf you cast this spell multiple times, you can have no more than two of its non-instantaneous effects active at a time, and you can dismiss such an effect at any time during your turn.</p>",
-    "range": "30 feet",
-    "ritual": false,
-    "duration": "Instantaneous",
-    "concentration": false,
-    "casting_time": "1 Action",
-    "level": 0,
-    "school": "Transmutation",
-    "class": [
-      "Druid",
-      "Sorcerer",
-      "Wizard"
-    ],
-    "level_desc": "Cantrip",
-    "class_desc": "Druid, Sorcerer, Wizard",
-    "range_desc": "30 feet",
-    "component_desc": "S",
-    "verbal": false,
     "material": false,
     "somatic": true,
     "source": "FNF",
