@@ -11687,7 +11687,7 @@ var spells = [
       "Wizard"
     ],
     "level_desc": "Cantrip",
-    "class_desc": "Bard,, Sorceror,, Warlock,, Wizard",
+    "class_desc": "Bard, Sorceror, Warlock, Wizard",
     "range_desc": "Self",
     "component_desc": "V, S",
     "verbal": true,
