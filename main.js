@@ -513,6 +513,7 @@ $(document).ready(function() {
   $('#filteridrf').bind('click',function() { toggleFilter(this, filterSources, 'IDRF') });
   $('#filterua78do').bind('click',function() { toggleFilter(this, filterSources, 'UA78DO') });
   $('#filterfnf').bind('click',function() { toggleFilter(this, filterSources, 'FNF') });
+  $('#filterfnfv').bind('click',function() { toggleFilter(this, filterSources, 'FNFV') });
   $('#clearsources').bind('click', function() {
     $('a.filtersource').removeClass('selected');
     filterSources = new Set();
