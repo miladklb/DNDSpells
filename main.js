@@ -54,7 +54,7 @@ $(document).ready(function() {
       filterOaths = new Set(),
       filterPatrons = new Set(),
 
-      filterSources = new Set(['PHB']),
+      filterSources = new Set(['FNF']),
       filterLevels = new Set(),
       filterSchools = new Set(),
       filterSearch = '';
