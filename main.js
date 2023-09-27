@@ -611,7 +611,7 @@ $(document).ready(function() {
     $('.filterbutton').removeClass('selected');
     $('#filterfnf').addClass('selected');
 
-    filterSources = new Set(['PHB']);
+    filterSources = new Set(['FNF']);
     filterClasses = new Set();
     filterDomains = new Set();
     filterCircles = new Set();
