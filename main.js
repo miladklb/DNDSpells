@@ -609,7 +609,7 @@ $(document).ready(function() {
 
   $('#clearfilters').bind('click', function() {
     $('.filterbutton').removeClass('selected');
-    $('#filterphb').addClass('selected');
+    $('#filterfnf').addClass('selected');
 
     filterSources = new Set(['PHB']);
     filterClasses = new Set();
