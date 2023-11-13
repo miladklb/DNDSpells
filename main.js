@@ -54,7 +54,7 @@ $(document).ready(function() {
       filterOaths = new Set(),
       filterPatrons = new Set(),
 
-      filterSources = new Set(['PHB']),
+      filterSources = new Set(['FNF']),
       filterLevels = new Set(),
       filterSchools = new Set(),
       filterSearch = '';
@@ -609,9 +609,9 @@ $(document).ready(function() {
 
   $('#clearfilters').bind('click', function() {
     $('.filterbutton').removeClass('selected');
-    $('#filterphb').addClass('selected');
+    $('#filterfnf').addClass('selected');
 
-    filterSources = new Set(['PHB']);
+    filterSources = new Set(['FNF']);
     filterClasses = new Set();
     filterDomains = new Set();
     filterCircles = new Set();
