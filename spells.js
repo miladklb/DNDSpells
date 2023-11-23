@@ -14802,7 +14802,7 @@ var spells = [
   },
   {
     "name": "Hex",
-    "desc": "<p> You place a curse on a creature that you can see within range. Until the spell ends, you deal an extra 1d6 necrotic damage to the target whenever you hit it with an attack. Also, choose one ability when you cast the spell. The target has disadvantage on ability checks made with the chosen ability.\n\nIf the target drops to 0 hit points before this spell ends, you can use a bonus action on a subsequent turn of yours to curse a new creature.\n\nA Remove Curse cast on the target ends this spell early.</p>",
+    "desc": "<p> You place a curse on a creature that you can see within range. Choose one ability when you cast the spell. The creature makes a charisma saving throw. On a failed save they take 1d6 psychic damage and the target has disadvantage on ability checks made with the chosen ability. On a success the target takes half damage.</p>",
     "range": "90 feet",
     "ritual": false,
     "duration": "Concentration, up to 1 minute",
@@ -14822,7 +14822,7 @@ var spells = [
     "somatic": true,
     "source": "FNF",
     "page": 69,
-    "higher_level": "<p> At Higher Levels. When you cast this spell using a spell slot of 3rd or 4th level, you can maintain your concentration on the spell for up to 8 hours. When you use a spell slot of 5th level or higher, you can maintain your concentration on the spell for up to 24 hours.</p>"
+    "higher_level": "<p> At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, increase the damage by 1d6 for each spell slot above 1st. When you cast this spell using a spell slot of 3rd or 4th level, you can maintain your concentration on the spell for up to 8 hours. When you use a spell slot of 5th level or higher, you can maintain your concentration on the spell for up to 24 hours.</p>"
   },
   {
     "name": "Silvery Barbs",
