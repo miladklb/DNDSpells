@@ -14357,7 +14357,7 @@ var spells = [
   },
   {
     "name": "Mage Armor",
-    "desc": "<p> You touch a willing creature who isn\u2019t wearing armor, and a protective magical force surrounds it until the spell ends. The target\u2019s base AC becomes 13 + its Dexterity modifier. The spell ends if the target dons armor or if you dismiss the spell as an action.</p>",
+    "desc": "<p> You touch a willing creature who isn\u2019t wearing armor, and a protective magical force surrounds it until the spell ends. The target\u2019s base AC becomes 12 + its Dexterity modifier. The spell ends if the target dons armor or if you dismiss the spell as an action.</p>",
     "range": "Touch",
     "ritual": false,
     "duration": "Until your next long rest",
@@ -15273,6 +15273,28 @@ var spells = [
     "somatic": true,
     "source": "FNF",
     "page": 69
+  },
+  {
+    "name": "Infernal Tremor",
+    "desc": "<p> (Earth Tremor spell variant)\n\nYou cause a tremor in the ground within range that opens flaming fissures into your patron's realm. Each creature other than you in the spell's area must make a Dexterity saving throw. On a failed save, a creature takes 1d4 bludgeoning damage and is knocked prone. For the duration of the spell, any creature other than you that ends it's turn on that ground takes 1d4 fire damage.</p>",
+    "range": "Self (10-foot radius)",
+    "ritual": false,
+    "duration": "1 minute",
+    "concentration": false,
+    "casting_time": "1 action",
+    "level": 1,
+    "school": "Conjuration",
+    "class": [],
+    "level_desc": "1st-level",
+    "class_desc": "",
+    "range_desc": "Self (10-foot radius)",
+    "component_desc": "V, S",
+    "verbal": true,
+    "material": false,
+    "somatic": true,
+    "source": "FNFV",
+    "page": 69,
+    "higher_level": "<p> At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the bludgeoning and fire damage increases by 1d4 for each slot level above 1st.</p>"
   },
   {
     "name": "Frost Fingers",
