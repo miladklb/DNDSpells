@@ -14802,7 +14802,7 @@ var spells = [
   },
   {
     "name": "Synaptic Misfire",
-    "desc": "<p> You magically impede the triggering creature. The triggering creature must reroll the d20 and use the lower roll.\n\nThen if the creature succeeds any ways they gain 1 level of staggered.</p>",
+    "desc": "<p> You magically impede the triggering creature. The triggering creature must reroll the d20 and use the lower roll.\n\nThen if the creature succeeds anyways they gain 1 level of staggered.</p>",
     "range": "60 feet",
     "ritual": false,
     "duration": "Instantaneous",
@@ -15279,7 +15279,7 @@ var spells = [
   },
   {
     "name": "Dendrobatid's Glistening Sheen",
-    "desc": "<p> Your skin gains a brightly colored pattern and becomes wet to touch. For the duration of the spell when you use your action to touch a creature within 5 feet or creature attempts a melee attack against you, the creature gains one level of poisoned. This spell ends if this effect has happened 3 times.</p>",
+    "desc": "<p> Your skin gains a brightly colored pattern and becomes wet to the touch. For the duration of the spell when you use your action to touch a creature within 5 feet or creature attempts a melee attack against you, the creature gains one level of poisoned. This spell ends if this effect has happened 3 times.</p>",
     "range": "Self",
     "ritual": false,
     "duration": "1 Minute",
@@ -15352,7 +15352,7 @@ var spells = [
     "verbal": false,
     "material": false,
     "somatic": true,
-    "source": "",
+    "source": "FNF",
     "page": 69,
     "higher_level": "<p> At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 2d4 for each slot level above 1st.</p>"
   },
