@@ -13254,7 +13254,7 @@ var spells = [
   },
   {
     "name": "Inflict Wounds",
-    "desc": "<p> Make a melee spell attack against a creature you can reach. On a hit, the target takes 3d10 necrotic damage</p>",
+    "desc": "<p> Make a melee spell attack against a creature you can reach. On a hit, the target takes 1d12 necrotic damage and gains 2 levels of decayed</p>",
     "range": "Touch",
     "ritual": false,
     "duration": "Instantaneous",
@@ -13263,10 +13263,11 @@ var spells = [
     "level": 1,
     "school": "Necromancy",
     "class": [
-      "Cleric"
+      "Cleric",
+      "Warlock"
     ],
     "level_desc": "1st-level",
-    "class_desc": "Cleric",
+    "class_desc": "Cleric, Warlock",
     "range_desc": "Touch",
     "component_desc": "V, S",
     "verbal": true,
@@ -13275,31 +13276,6 @@ var spells = [
     "source": "FNF",
     "page": 69,
     "higher_level": "<p> At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d10 for each slot level above 1st.</p>"
-  },
-  {
-    "name": "Ray of Sickness",
-    "desc": "<p> A ray of sickening greenish energy lashes out toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 2d8 poison damage and must make a Constitution saving throw. On a failed save, it is also poisoned until the end of your next turn.</p>",
-    "range": "60 feet",
-    "ritual": false,
-    "duration": "Instantaneous",
-    "concentration": false,
-    "casting_time": "1 action",
-    "level": 1,
-    "school": "Necromancy",
-    "class": [
-      "Sorcerer",
-      "Wizard"
-    ],
-    "level_desc": "1st-level",
-    "class_desc": "Sorcerer, Wizard",
-    "range_desc": "60 feet",
-    "component_desc": "V, S",
-    "verbal": true,
-    "material": false,
-    "somatic": true,
-    "source": "FNF",
-    "page": 69,
-    "higher_level": "<p> At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st.</p>"
   },
   {
     "name": "Blindness/Deafness",
@@ -13984,7 +13960,7 @@ var spells = [
   },
   {
     "name": "Witch Bolt",
-    "desc": "<p> A beam of crackling, blue energy lances out toward a creature within range, forming a sustained arc of lightning between you and the target. Make a ranged spell attack against that creature. On a hit, the target takes 1d12 lightning damage, and on each of your turns for the duration, you can use your action to deal 1d12 lightning damage to the target automatically. The spell ends if you use your action to do anything else. The spell also ends if the target is ever outside the spell\u2019s range or if it has total cover from you.</p>",
+    "desc": "<p> A beam of crackling, blue energy lances out toward a creature within range, forming a sustained arc of lightning between you and the target. Make a ranged spell attack against that creature. On a hit, the target takes 1d12 lightning damage, and on each of your turns for the duration, you can use your action to deal 1d12 lightning damage to the target automatically. Whenever this spell deals damage apply 1 level of shocked to the target. The spell ends if you use your action to do anything else. The spell also ends if the target is ever outside the spell\u2019s range or if it has total cover from you.</p>",
     "range": "30 feet",
     "ritual": false,
     "duration": "Concentration, up to 1 minute",
@@ -14825,8 +14801,8 @@ var spells = [
     "higher_level": "<p> At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, increase the damage by 1d6 for each spell slot above 1st. When you cast this spell using a spell slot of 3rd or 4th level, you can maintain your concentration on the spell for up to 8 hours. When you use a spell slot of 5th level or higher, you can maintain your concentration on the spell for up to 24 hours.</p>"
   },
   {
-    "name": "Silvery Barbs",
-    "desc": "<p> You magically distract the triggering creature and turn its momentary uncertainty into encouragement for another creature. The triggering creature must reroll the d20 and use the lower roll.\n\nYou can then choose a different creature you can see within range (you can choose yourself). The chosen creature has advantage on the next attack roll, ability check, or saving throw it makes within 1 minute. A creature can be empowered by only one use of this spell at a time.</p>",
+    "name": "Synaptic Misfire",
+    "desc": "<p> You magically impede the triggering creature. The triggering creature must reroll the d20 and use the lower roll.\n\nThen if the creature succeeds any ways they gain 1 level of staggered.</p>",
     "range": "60 feet",
     "ritual": false,
     "duration": "Instantaneous",
@@ -14847,7 +14823,8 @@ var spells = [
     "material": false,
     "somatic": false,
     "source": "FNF",
-    "page": 69
+    "page": 69,
+    "higher_level": "<p> At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, increase the amount of stagger applied by 1, for every 2 levels higher than first.</p>"
   },
   {
     "name": "Sleep",
@@ -15273,6 +15250,111 @@ var spells = [
     "somatic": true,
     "source": "FNF",
     "page": 69
+  },
+  {
+    "name": "Crystal Drill",
+    "desc": "<p> Make a melee spell attack against a creature within reach. On a hit, the traget takes 2d10 Piercing damage and gains 1 level of exposed</p>",
+    "range": "touch",
+    "ritual": false,
+    "duration": "Instantaneous",
+    "concentration": false,
+    "casting_time": "1 action",
+    "level": 1,
+    "school": "Conjuration",
+    "class": [
+      "Bard",
+      "Ranger",
+      "Sorcerer"
+    ],
+    "level_desc": "1st-level",
+    "class_desc": "Bard, Ranger, Sorcerer",
+    "range_desc": "touch",
+    "component_desc": "S",
+    "verbal": false,
+    "material": false,
+    "somatic": true,
+    "source": "FNF",
+    "page": 69,
+    "higher_level": "<p> At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d10 for each slot level above 1st. When you cast this spell using a spell slot of 3rd level or higher, the levels of exposed increase by 1 for every 2 slot levels above 1st.</p>"
+  },
+  {
+    "name": "Dendrobatid's Glistening Sheen",
+    "desc": "<p> Your skin gains a brightly colored pattern and becomes wet to touch. For the duration of the spell when you use your action to touch a creature within 5 feet or creature attempts a melee attack against you, the creature gains one level of poisoned. This spell ends if this effect has happened 4 times.</p>",
+    "range": "Self",
+    "ritual": false,
+    "duration": "1 Minute",
+    "concentration": false,
+    "casting_time": "1 action",
+    "level": 1,
+    "school": "Transmutation",
+    "class": [
+      "Druid",
+      "Sorcerer",
+      "Warlock"
+    ],
+    "level_desc": "1st-level",
+    "class_desc": "Druid, Sorcerer, Warlock",
+    "range_desc": "Self",
+    "component_desc": "V, S",
+    "verbal": true,
+    "material": false,
+    "somatic": true,
+    "source": "FNF",
+    "page": 69,
+    "higher_level": "<p> At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the amount of times this spell can trigger is increased by 2, for each slot level above 1st.</p>"
+  },
+  {
+    "name": "Ego Burn",
+    "desc": "<p> You launch a psychic assualt on a creature you can see within range. It make an Intelligence saving throw, on a fail it takes 4d4 damage, is confused until the end of your next turn, and cannot remember it's name or recognize itself. On a succesful save it takes half as much damage.</p>",
+    "range": "60 feet",
+    "ritual": false,
+    "duration": "Instantaneous",
+    "concentration": false,
+    "casting_time": "1 action",
+    "level": 1,
+    "school": "Enchantment",
+    "class": [
+      "Bard",
+      "Cleric",
+      "Warlock",
+      "Wizard"
+    ],
+    "level_desc": "1st-level",
+    "class_desc": "Bard, Cleric, Warlock, Wizard",
+    "range_desc": "60 feet",
+    "component_desc": "V, S",
+    "verbal": true,
+    "material": false,
+    "somatic": true,
+    "source": "FNF",
+    "page": 69,
+    "higher_level": "<p> At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 2d4 for each slot level above 1st.</p>"
+  },
+  {
+    "name": "Acid Stream",
+    "desc": "<p> Target creature makes a dex save. On a failed save the target takes 2d4 acid damage, gains 1 level of Corroded for the spell's duration, and at the start of your turn as long as you have a free hand the creature gains an additional level of Corroded for the spell\u2019s duration. The spell ends if you are ever 40 feet away from the target or you lose line of sight of the target.\nOn a successful save the creature takes half as much damage and the spell ends.</p>",
+    "range": "40 feet",
+    "ritual": false,
+    "duration": "Concentration, up to 1 minute",
+    "concentration": false,
+    "casting_time": "1 action",
+    "level": 1,
+    "school": "Conjuration",
+    "class": [
+      "Druid",
+      "Sorcerer",
+      "Wizard"
+    ],
+    "level_desc": "1st-level",
+    "class_desc": "Druid, Sorcerer, Wizard",
+    "range_desc": "40 feet",
+    "component_desc": "S",
+    "verbal": false,
+    "material": false,
+    "somatic": true,
+    "source": "",
+    "page": 69,
+    "higher_level": "<p> At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 2d4 for each slot level above 1st.</p>"
   },
   {
     "name": "Infernal Tremor",
