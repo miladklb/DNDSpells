@@ -15279,7 +15279,7 @@ var spells = [
   },
   {
     "name": "Dendrobatid's Glistening Sheen",
-    "desc": "<p> Your skin gains a brightly colored pattern and becomes wet to touch. For the duration of the spell when you use your action to touch a creature within 5 feet or creature attempts a melee attack against you, the creature gains one level of poisoned. This spell ends if this effect has happened 4 times.</p>",
+    "desc": "<p> Your skin gains a brightly colored pattern and becomes wet to touch. For the duration of the spell when you use your action to touch a creature within 5 feet or creature attempts a melee attack against you, the creature gains one level of poisoned. This spell ends if this effect has happened 3 times.</p>",
     "range": "Self",
     "ritual": false,
     "duration": "1 Minute",
@@ -15301,7 +15301,7 @@ var spells = [
     "somatic": true,
     "source": "FNF",
     "page": 69,
-    "higher_level": "<p> At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the amount of times this spell can trigger is increased by 2, for each slot level above 1st.</p>"
+    "higher_level": "<p> At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the amount of times this spell can trigger is increased by 1, for each slot level above 1st.</p>"
   },
   {
     "name": "Ego Burn",
