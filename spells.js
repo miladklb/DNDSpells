@@ -13960,7 +13960,7 @@ var spells = [
   },
   {
     "name": "Witch Bolt",
-    "desc": "<p> A beam of crackling, blue energy lances out toward a creature within range, forming a sustained arc of lightning between you and the target. Make a ranged spell attack against that creature. On a hit, the target takes 1d12 lightning damage, and on each of your turns for the duration, you can use your action to deal 1d12 lightning damage to the target automatically. Whenever this spell deals damage apply 1 level of shocked to the target. The spell ends if you use your action to do anything else. The spell also ends if the target is ever outside the spell\u2019s range or if it has total cover from you.</p>",
+    "desc": "<p> A beam of crackling, blue energy lances out toward a creature within range, forming a sustained arc of lightning between you and the target. Make a ranged spell attack against that creature. On a hit, the target takes 2d8 lightning damage, gains 2 levels of shocked, and on each of your turns for the duration, you can use your action to deal 2d8 lightning damage to the target automatically and end the spell. The spell also ends if the target is ever outside the spell\u2019s range or if it has total cover from you.</p>",
     "range": "30 feet",
     "ritual": false,
     "duration": "Concentration, up to 1 minute",
@@ -13982,7 +13982,7 @@ var spells = [
     "somatic": false,
     "source": "FNF",
     "page": 69,
-    "higher_level": "<p> At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the initial damage increases by 1d12 for each slot level above 1st.</p>"
+    "higher_level": "<p> At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st.</p>"
   },
   {
     "name": "Wrathful Smite",
@@ -15278,7 +15278,7 @@ var spells = [
     "higher_level": "<p> At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d10 for each slot level above 1st. When you cast this spell using a spell slot of 3rd level or higher, the levels of exposed increase by 1 for every 2 slot levels above 1st.</p>"
   },
   {
-    "name": "Dendrobatid's Glistening Sheen",
+    "name": "Dendrobahd's Glistening Sheen",
     "desc": "<p> Your skin gains a brightly colored pattern and becomes wet to the touch. For the duration of the spell when you use your action to touch a creature within 5 feet or creature attempts a melee attack against you, the creature gains one level of poisoned. This spell ends if this effect has happened 3 times.</p>",
     "range": "Self",
     "ritual": false,
@@ -15332,7 +15332,7 @@ var spells = [
   },
   {
     "name": "Acid Stream",
-    "desc": "<p> Target creature makes a dex save. On a failed save the target takes 2d4 acid damage, gains 1 level of Corroded for the spell's duration, and at the start of your turn as long as you have a free hand the creature gains an additional level of Corroded for the spell\u2019s duration. The spell ends if you are ever 40 feet away from the target or you lose line of sight of the target.\nOn a successful save the creature takes half as much damage and the spell ends.</p>",
+    "desc": "<p> Target creature makes a dexterity save. On a failed save the target takes 2d4 acid damage, gains 1 level of Corroded for the spell's duration, and at the start of your turn as long as you have a free hand the creature gains an additional level of Corroded for the spell\u2019s duration. The spell ends if you are ever 40 feet away from the target or you lose line of sight of the target.\nOn a successful save the creature takes no damage and the spell ends.</p>",
     "range": "40 feet",
     "ritual": false,
     "duration": "Concentration, up to 1 minute",
