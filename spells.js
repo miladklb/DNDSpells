@@ -12650,7 +12650,7 @@ var spells = [
   },
   {
     "name": "Goodberry",
-    "desc": "<p> Up to ten berries appear in your hand and are infused with magic for the duration. A creature can use its action to eat one berry. Eating a berry restores 1 hit point, and the berry provides enough nourishment to sustain a creature for one day.\n\nThe berries lose their potency if they have not been consumed within 24 hours of the casting of this spell.</p>",
+    "desc": "<p> Up to three berries appear in your hand and are infused with magic for the duration. A creature can use its action to eat one berry. Eating a berry restores 1d4 hit points, and three berries provide enough nourishment to sustain a creature for one day.\n\nThe berries lose their potency if they have not been consumed within 24 hours of the casting of this spell.</p>",
     "range": "Touch",
     "ritual": false,
     "duration": "Instantaneous",
@@ -12670,7 +12670,8 @@ var spells = [
     "material": false,
     "somatic": true,
     "source": "FNF",
-    "page": 69
+    "page": 69,
+    "higher_level": "<p> At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you can create one additional berry for each slot level above 1st. Additionally each berry heals an additional 1 HP for each slot level above 1st</p>"
   },
   {
     "name": "Jump",
@@ -13658,7 +13659,7 @@ var spells = [
     "higher_level": "<p> At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st.</p>"
   },
   {
-    "name": "Curing Wounds",
+    "name": "Cure Wounds",
     "desc": "<p> A creature you touch regains a number of hit points equal to 1d8 + your spellcasting ability modifier. This spell has no effect on undead or constructs.</p>",
     "range": "Touch",
     "ritual": false,
@@ -13880,7 +13881,7 @@ var spells = [
     "somatic": true,
     "source": "FNF",
     "page": 69,
-    "higher_level": "<p> At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the spell creates one more dart for each slot level above 1st.</p>"
+    "higher_level": "<p> At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the spell creates one more dart for each slot level above 1st. Additionally each dart deals an additional damage for each slot level above 2nd.</p>"
   },
   {
     "name": "Searing Smite",
@@ -14859,7 +14860,7 @@ var spells = [
     "ritual": false,
     "duration": "1 Round",
     "concentration": false,
-    "casting_time": "1 reaction, which you take when you take cold, fire, lightning, or thunder damage",
+    "casting_time": "1 reaction, which you take when you take damage",
     "level": 1,
     "school": "Abjuration",
     "class": [
@@ -15355,6 +15356,186 @@ var spells = [
     "source": "FNF",
     "page": 69,
     "higher_level": "<p> At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 2d4 for each slot level above 1st.</p>"
+  },
+  {
+    "name": "Petal Storm",
+    "desc": "<p> Make a ranged spell attack against a creature within range. On a hit you deal 2d8 slashing damage and can make a ranged spell attack against another creature within range. On a hit you deal 1d8 slashing damage, gain +1 AC until the end of your next turn and can make a ranged spell attack against a third creature within range. On a hit you apply 1 level of Bleeding.</p>",
+    "range": "20 feet",
+    "ritual": false,
+    "duration": "Instantaneous",
+    "concentration": false,
+    "casting_time": "1 action",
+    "level": 1,
+    "school": "Transmutation",
+    "class": [
+      "Bard",
+      "Druid",
+      "Ranger",
+      "Wizard"
+    ],
+    "level_desc": "1st-level",
+    "class_desc": "Bard, Druid, Ranger, Wizard",
+    "range_desc": "20 feet",
+    "component_desc": "S",
+    "verbal": false,
+    "material": false,
+    "somatic": true,
+    "source": "FNF",
+    "page": 69,
+    "higher_level": "<p> At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the initial damage increases by 1d8 for each slot level above 1st.</p>"
+  },
+  {
+    "name": "Gaze of the Desert",
+    "desc": "<p> When you cast this spell, gain 7 levels of exhaustion until the spell ends. When you cast this spell, at the end of your turn and as an action on each of your turns you can have a creature within range of you make a constitution saving throw, taking 1d8 radiant damage and gaining a level of exhaustion until the spell ends on a failed save, or half as much damage on a successful save. When you do, lose 1 level of exhaustion.\n\nWhile you are concentrating on this spell you have advantage constitution saving throws, resistance to heat and radiant damage, and you are adapted to hot climates.</p>",
+    "range": "Self",
+    "ritual": false,
+    "duration": "Concentration, up to 10 minutes",
+    "concentration": true,
+    "casting_time": "1 action",
+    "level": 2,
+    "school": "Transmutation",
+    "class": [
+      "Druid,",
+      "Sorcerer,",
+      "Warlock,",
+      "Wizard"
+    ],
+    "level_desc": "2nd-level",
+    "class_desc": "Druid,, Sorcerer,, Warlock,, Wizard",
+    "range_desc": "Self",
+    "component_desc": "S",
+    "verbal": false,
+    "material": false,
+    "somatic": true,
+    "source": "FNF",
+    "page": 69,
+    "higher_level": "<p> At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, each time you deal damage, deal an additional 1d8 radiant damage for every 2 levels abovee 2nd.</p>"
+  },
+  {
+    "name": "Veil of the Black Tear",
+    "desc": "<p> Create an energy field in a 10 foot radius around you. Creatures inside the field have their level of cover against creatures outside the field increased by 1. Creatures inside the field have resistance to damage from ranged attack rolls and all non-physical damage.\n\nIf you move while concentrating on this spell, it ends.</p>",
+    "range": "Self",
+    "ritual": false,
+    "duration": "Concentration, up 3 rounds",
+    "concentration": true,
+    "casting_time": "1 Reaction, which you take when a creature within 10 feet of you is hit by a ranged attack.",
+    "level": 2,
+    "school": "Abjuration",
+    "class": [
+      "Cleric,",
+      "Paladin,",
+      "Sorcerer,",
+      "Wizard"
+    ],
+    "level_desc": "2nd-level",
+    "class_desc": "Cleric,, Paladin,, Sorcerer,, Wizard",
+    "range_desc": "Self",
+    "component_desc": "V, S",
+    "verbal": true,
+    "material": false,
+    "somatic": true,
+    "source": "FNF",
+    "page": 69
+  },
+  {
+    "name": "Soul Scorch",
+    "desc": "<p> Envelope yourself in a cloak of blue flames. For the duration of the spell, at the end fo your turn deal 1d12 fire damage to creatures within 5 feet and 1d6 radiant damage to yourself (does trigger concentration save). The flames provide bright light within 20 feet and dim light for 20 feet, but cannot ignite the environment.</p>",
+    "range": "Self",
+    "ritual": false,
+    "duration": "Concentration, up to one minute",
+    "concentration": true,
+    "casting_time": "1 action",
+    "level": 1,
+    "school": "Evocation",
+    "class": [
+      "Bard,",
+      "Cleric,",
+      "Sorcerer"
+    ],
+    "level_desc": "1st-level",
+    "class_desc": "Bard,, Cleric,, Sorcerer",
+    "range_desc": "Self",
+    "component_desc": "V, S",
+    "verbal": true,
+    "material": false,
+    "somatic": true,
+    "source": "FNF",
+    "page": 69,
+    "higher_level": "<p> At Higher Levels. When you cast this spell using a spell slot of 3rd or higher, increase the fire damage by 1d12 for every spell level above 2nd</p>"
+  },
+  {
+    "name": "Ray of Sickness",
+    "desc": "<p> Make a ranged spell attack against a creature within range. On a hit the creature takes 3d12 Poison damage and must make a constitution saving throw. On a failed save the creature gains Poisoned 2.</p>",
+    "range": "60 feet",
+    "ritual": false,
+    "duration": "Instantaneous",
+    "concentration": false,
+    "casting_time": "1 action",
+    "level": 2,
+    "school": "Necromancy",
+    "class": [
+      "Sorcerer,",
+      "Warlock,",
+      "Wizard"
+    ],
+    "level_desc": "2nd-level",
+    "class_desc": "Sorcerer,, Warlock,, Wizard",
+    "range_desc": "60 feet",
+    "component_desc": "S",
+    "verbal": false,
+    "material": false,
+    "somatic": true,
+    "source": "FNF",
+    "page": 69,
+    "higher_level": "<p> At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, increase the damage by 1d12 for every spell level above 2nd. When you cast this spell using a spell slot of 4th level or higher apply an additional level of Poisoned for very 2 spell levels above 2nd.</p>"
+  },
+  {
+    "name": "Lightning Arrow",
+    "desc": "<p> As part of the action to cast this spell, make a ranged weapon attack against a creature within range. On a hit, the target suffers the attack\u2019s normal effects, and it takes an additional 1d8 additional lightning damage. On a hit or miss all creatures within 10 feet of the target must make a dexterity saving throw, taking 2d8 lightning damage and a 1 level of shocked on a failed save, or half as much damage on a successful save.</p>",
+    "range": "Touch",
+    "ritual": false,
+    "duration": "Instantaneous",
+    "concentration": false,
+    "casting_time": "1 action",
+    "level": 2,
+    "school": "Transmutation",
+    "class": [
+      "Ranger"
+    ],
+    "level_desc": "2nd-level",
+    "class_desc": "Ranger",
+    "range_desc": "Touch",
+    "component_desc": "S",
+    "verbal": false,
+    "material": false,
+    "somatic": true,
+    "source": "FNF",
+    "page": 69,
+    "higher_level": "<p> At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher increase the damage of both effects by 1d8 for each level above 2nd.</p>"
+  },
+  {
+    "name": "Acid Arrow",
+    "desc": "<p> A shimmering green arrow streaks toward a target within range and bursts in a spray of acid. Make a ranged spell attack against the target. On a hit, the target takes 4d4 acid damage immediately and 2d4 acid damage at the end of its next turn. On a miss, the arrow splashes the target with acid for half as much of the initial damage and no damage at the end of its next turn.</p>",
+    "range": "90 feet",
+    "ritual": false,
+    "duration": "Instantaneous",
+    "concentration": false,
+    "casting_time": "1 action",
+    "level": 2,
+    "school": "Conjuration",
+    "class": [
+      "Wizard"
+    ],
+    "level_desc": "2nd-level",
+    "class_desc": "Wizard",
+    "range_desc": "90 feet",
+    "component_desc": "V, S",
+    "verbal": true,
+    "material": false,
+    "somatic": true,
+    "source": "FNF",
+    "page": 69,
+    "higher_level": "<p> At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the damage (both initial and later) increases by 1d4 for each slot level above 2nd.</p>"
   },
   {
     "name": "Infernal Tremor",
