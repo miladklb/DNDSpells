@@ -12671,7 +12671,7 @@ var spells = [
     "somatic": true,
     "source": "FNF",
     "page": 69,
-    "higher_level": "<p> At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you can create one additional berry for each slot level above 1st. Additionally each berry heals an additional 1 HP for each slot level above 1st</p>"
+    "higher_level": "<p> At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you can create one additional berry for each slot level above 1st. When you cast this spell using a spell slot of 3rd level or higher, each berry restores an additional hit point for every 2 slot levels above 1st.</p>"
   },
   {
     "name": "Jump",
@@ -13181,7 +13181,7 @@ var spells = [
   },
   {
     "name": "Spike Growth",
-    "desc": "<p> The ground in a 20-foot radius centered on a point within range twists and sprouts hard spikes and thorns. The area becomes difficult terrain for the duration. When a creature moves into or within the area, it takes 2d4 piercing damage for every 5 feet it travels.\n\nThe transformation of the ground is camouflaged to look natural. Any creature that can\u2019t see the area at the time the spell is cast must make a Wisdom (Perception) check against your spell save DC to recognize the terrain as hazardous before entering it.</p>",
+    "desc": "<p> The ground in a 20-foot radius centered on a point within range twists and sprouts hard spikes and thorns. The area becomes difficult terrain for the duration. When a creature moves into or within the area, it gains 1 level of bleeding for every 5 feet it travels.\n\nThe transformation of the ground is camouflaged to look natural. Any creature that can\u2019t see the area at the time the spell is cast must make a Wisdom (Perception) check against your spell save DC to recognize the terrain as hazardous before entering it.</p>",
     "range": "150 feet",
     "ritual": false,
     "duration": "Concentration, up to 10 minutes",
@@ -13881,7 +13881,7 @@ var spells = [
     "somatic": true,
     "source": "FNF",
     "page": 69,
-    "higher_level": "<p> At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the spell creates one more dart for each slot level above 1st. Additionally each dart deals an additional damage for each slot level above 2nd.</p>"
+    "higher_level": "<p> At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, create one more dart for each slot level above 1st. When you cast this spell using a spell slot of 3rd level or higher, each dart deals an additional damage for every 2 slot levels above 1st.</p>"
   },
   {
     "name": "Searing Smite",
@@ -14191,7 +14191,7 @@ var spells = [
     "concentration": false,
     "casting_time": "10 minutes",
     "level": 2,
-    "school": "Evocation",
+    "school": "Transmutation",
     "class": [
       "Cleric",
       "Paladin"
@@ -15395,13 +15395,13 @@ var spells = [
     "level": 2,
     "school": "Transmutation",
     "class": [
-      "Druid,",
-      "Sorcerer,",
-      "Warlock,",
+      "Druid",
+      "Sorcerer",
+      "Warlock",
       "Wizard"
     ],
     "level_desc": "2nd-level",
-    "class_desc": "Druid,, Sorcerer,, Warlock,, Wizard",
+    "class_desc": "Druid, Sorcerer, Warlock, Wizard",
     "range_desc": "Self",
     "component_desc": "S",
     "verbal": false,
@@ -15422,13 +15422,13 @@ var spells = [
     "level": 2,
     "school": "Abjuration",
     "class": [
-      "Cleric,",
-      "Paladin,",
-      "Sorcerer,",
+      "Cleric",
+      "Paladin",
+      "Sorcerer",
       "Wizard"
     ],
     "level_desc": "2nd-level",
-    "class_desc": "Cleric,, Paladin,, Sorcerer,, Wizard",
+    "class_desc": "Cleric, Paladin, Sorcerer, Wizard",
     "range_desc": "Self",
     "component_desc": "V, S",
     "verbal": true,
@@ -15448,12 +15448,12 @@ var spells = [
     "level": 1,
     "school": "Evocation",
     "class": [
-      "Bard,",
-      "Cleric,",
+      "Bard",
+      "Cleric",
       "Sorcerer"
     ],
     "level_desc": "1st-level",
-    "class_desc": "Bard,, Cleric,, Sorcerer",
+    "class_desc": "Bard Cleric Sorcerer",
     "range_desc": "Self",
     "component_desc": "V, S",
     "verbal": true,
@@ -15474,12 +15474,12 @@ var spells = [
     "level": 2,
     "school": "Necromancy",
     "class": [
-      "Sorcerer,",
-      "Warlock,",
+      "Sorcerer",
+      "Warlock",
       "Wizard"
     ],
     "level_desc": "2nd-level",
-    "class_desc": "Sorcerer,, Warlock,, Wizard",
+    "class_desc": "Sorcerer Warlock Wizard",
     "range_desc": "60 feet",
     "component_desc": "S",
     "verbal": false,
@@ -15536,6 +15536,32 @@ var spells = [
     "source": "FNF",
     "page": 69,
     "higher_level": "<p> At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the damage (both initial and later) increases by 1d4 for each slot level above 2nd.</p>"
+  },
+  {
+    "name": "Mind Spike",
+    "desc": "<p> You reach into the mind of one creature you can see within range. The target must make a Wisdom saving throw, taking 6d4 psychic damage on a failed save, or half as much damage on a successful one. On a failed save, you also always know the target's location until the spell ends, but only while the two of you are on the same plane of existence. While you have this knowledge, the target can\u2019t become hidden from you, and if it\u2019s invisible, it gains no benefit from that condition against you.</p>",
+    "range": "60 feet",
+    "ritual": false,
+    "duration": "Concentration, up to 1 hour",
+    "concentration": true,
+    "casting_time": "1 action",
+    "level": 2,
+    "school": "Divination",
+    "class": [
+      "Sorcerer",
+      "Warlock",
+      "Wizard"
+    ],
+    "level_desc": "2nd-level",
+    "class_desc": "Sorcerer, Warlock, Wizard",
+    "range_desc": "60 feet",
+    "component_desc": "S",
+    "verbal": false,
+    "material": false,
+    "somatic": true,
+    "source": "FNF",
+    "page": 69,
+    "higher_level": "<p> At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 2d4 for each slot level above 2nd.</p>"
   },
   {
     "name": "Infernal Tremor",
