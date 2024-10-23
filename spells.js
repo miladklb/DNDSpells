@@ -15203,7 +15203,8 @@ var spells = [
     "material": false,
     "somatic": true,
     "source": "FNF",
-    "page": 69
+    "page": 69,
+    "higher_level": "<p> When you cast this spell using a spell slot of 2nd level or higher, the range you can sense the presence of magic increases by 10 feet for each spell level above 1st</p>"
   },
   {
     "name": "Identify",
