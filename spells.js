@@ -12621,7 +12621,8 @@ var spells = [
     "material": false,
     "somatic": true,
     "source": "FNF",
-    "page": 69
+    "page": 69,
+    "higher_level": "<p> At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, gain an additional 5 feet of movement until the end of your turn, for each spell slot level above 1st.</p>"
   },
   {
     "name": "Feather Fall",
@@ -12900,7 +12901,8 @@ var spells = [
     "material": false,
     "somatic": false,
     "source": "FNF",
-    "page": 69
+    "page": 69,
+    "higher_level": "<p> At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for every 2 spell slot levels above 2nd.</p>"
   },
   {
     "name": "Enhance Ability",
