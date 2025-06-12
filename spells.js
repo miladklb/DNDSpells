@@ -11693,7 +11693,7 @@ var spells = [
       "Warlock"
     ],
     "level_desc": "7th-level",
-    "class_desc": "Sorcerer", Wizard", "Warlock",
+    "class_desc": "Sorcerer", "Wizard", "Warlock",
     "range_desc": "Self",
     "component_desc": "V, S",
     "verbal": true,
@@ -11703,4 +11703,32 @@ var spells = [
     "source": "EE PC",
     "page": 15
   },
+  {
+    "name": "Synaptic Staticp",
+    "desc": "<p>You choose a point within range and cause psychic energy to explode there. Each creature in a 20-foot-radius sphere centered on that point must make an Intelligence saving throw. A creature with an Intelligence score of 2 or lower can’t be affected by this spell. A target takes 8d6 psychic damage on a failed save, or half as much damage on a successful one.
+
+After a failed save, a target has muddled thoughts for 1 minute. During that time, it rolls a d6 and subtracts the number rolled from all its attack rolls and ability checks, as well as its Constitution saving throws to maintain concentration. The target can make an Intelligence saving throw at the end of each of its turns, ending the effect on itself on a success.</p>",
+    "higher_level": "<p>When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd. The creatures must be within 30 feet of each other when you target them.</p>",
+    "range": "120 feet",
+    "ritual": false,
+    "duration": "Instantaneous",
+    "concentration": false,
+    "casting_time": "1 action",
+    "level": 5,
+    "school": "Enchantment",
+    "class": [
+      "Sorcerer",
+      "Wizard"
+    ],
+    "level_desc": "5th-level",
+    "class_desc": "Sorcerer", Wizard",
+    "range_desc": "120 feet",
+    "component_desc": "V, S",
+    "verbal": true,
+    "material": false,
+    "somatic": true,
+    "material_cost": false,
+    "source": "EE PC",
+    "page": 15
+  },  
 ]
