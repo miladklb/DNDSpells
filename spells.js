@@ -11639,7 +11639,7 @@ var spells = [
       "Wizard",
       "Warlock"
     ],
-    "level_desc": "cantrip",
+    "level_desc": "Cantrip",
     "class_desc": "Sorcerer", "Wizard", "Warlock",
     "range_desc": "60 feet",
     "component_desc": "V",
