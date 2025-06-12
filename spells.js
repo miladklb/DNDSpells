@@ -11622,7 +11622,7 @@ var spells = [
     "somatic": true,
     "source": "PHB",
     "page": 289
-  }
+  },
   {
     "name": "Mind Sliver",
     "desc": "<p>You drive a disorienting spike of psychic energy into the mind of one creature you can see within range. The target must succeed on an Intelligence saving throw or take 1d6 psychic damage and subtract 1d4 from the next saving throw it makes before the end of your next turn.</p>",
