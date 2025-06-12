@@ -11728,5 +11728,5 @@ var spells = [
     "material_cost": false,
     "source": "EE PC",
     "page": 15
-  },  
+  }
 ]
