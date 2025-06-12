@@ -11640,7 +11640,7 @@ var spells = [
       "Warlock"
     ],
     "level_desc": "cantrip",
-    "class_desc": "Sorcerer", Wizard", "Warlock",
+    "class_desc": "Sorcerer", "Wizard", "Warlock",
     "range_desc": "60 feet",
     "component_desc": "V",
     "verbal": true,
@@ -11666,7 +11666,7 @@ var spells = [
       "Wizard"
     ],
     "level_desc": "2nd-level",
-    "class_desc": "Sorcerer", Wizard",
+    "class_desc": "Sorcerer", "Wizard",
     "range_desc": "90 feet",
     "component_desc": "V",
     "verbal": true,
@@ -11705,9 +11705,7 @@ var spells = [
   },
   {
     "name": "Synaptic Staticp",
-    "desc": "<p>You choose a point within range and cause psychic energy to explode there. Each creature in a 20-foot-radius sphere centered on that point must make an Intelligence saving throw. A creature with an Intelligence score of 2 or lower can’t be affected by this spell. A target takes 8d6 psychic damage on a failed save, or half as much damage on a successful one.
-
-After a failed save, a target has muddled thoughts for 1 minute. During that time, it rolls a d6 and subtracts the number rolled from all its attack rolls and ability checks, as well as its Constitution saving throws to maintain concentration. The target can make an Intelligence saving throw at the end of each of its turns, ending the effect on itself on a success.</p>",
+    "desc": "<p>You choose a point within range and cause psychic energy to explode there. Each creature in a 20-foot-radius sphere centered on that point must make an Intelligence saving throw. A creature with an Intelligence score of 2 or lower can’t be affected by this spell. A target takes 8d6 psychic damage on a failed save, or half as much damage on a successful one.After a failed save, a target has muddled thoughts for 1 minute. During that time, it rolls a d6 and subtracts the number rolled from all its attack rolls and ability checks, as well as its Constitution saving throws to maintain concentration. The target can make an Intelligence saving throw at the end of each of its turns, ending the effect on itself on a success.</p>",
     "higher_level": "<p>When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd. The creatures must be within 30 feet of each other when you target them.</p>",
     "range": "120 feet",
     "ritual": false,
@@ -11721,7 +11719,7 @@ After a failed save, a target has muddled thoughts for 1 minute. During that tim
       "Wizard"
     ],
     "level_desc": "5th-level",
-    "class_desc": "Sorcerer", Wizard",
+    "class_desc": "Sorcerer", "Wizard",
     "range_desc": "120 feet",
     "component_desc": "V, S",
     "verbal": true,
